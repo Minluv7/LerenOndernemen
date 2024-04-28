@@ -43,7 +43,7 @@
     >
       Login
     </button>
-    <p class="text-sm font-light text-gray-50" >
+    <p class="text-sm flex flex-col font-light text-gray-50" >
       Heb je nog geen account?
       <a
         href="#"
