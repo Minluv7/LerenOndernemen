@@ -15,3 +15,6 @@ body {
     }
   }
   
+button{
+  @apply rounded-lg border-2 border-solid border-[#013A63] bg-[#7AA5B8] flex w-full px-4 py-2 justify-center items-center gap-4
+}

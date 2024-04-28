@@ -4,7 +4,7 @@
     <header class="shadow-sm bg-white">
       <!-- Logo -->
       <div class="container mx-auto p-4">
-        <NuxtLink to="/home" class="font-bold"><img src="assets/image/Logo.png" alt="Logo"></NuxtLink>
+        <NuxtLink to="/home" class="font-bold"><img src="assets/image/logos/Logo.png" alt="Logo"></NuxtLink>
       </div>
     </header>
 
