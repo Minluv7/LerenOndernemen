@@ -4,6 +4,11 @@
   "compilerOptions": {
     "types": [
       "@nuxtjs/auth-next",
-    ]
+    ],
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
+    "lib": ["esnext"],
+    "esModuleInterop": true
   },
 }
