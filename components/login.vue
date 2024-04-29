@@ -1,9 +1,8 @@
 <template>
-   <div
-      class="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0"
-    >
+   <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0">
     
     <div class=" w-full bg-white rounded-lg shadow-md md:mt-0 sm:max-w-md xl:p-0">
+        
         <div class="flex justify-between mb-[-12rem]" >
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-full" width="216" height="242" viewBox="0 0 216 242" fill="none">
@@ -32,6 +31,13 @@
         </div>
 
         <div class="p-6 space-y-4 md:space-y-6 sm:p-8 mt-[-12rem]">
+            <a href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ml-auto" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#020617" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15 9L9 15" stroke="#020617" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 9L15 15" stroke="#020617" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a> 
             <div class="flex flex-col items-center">
                 <h1 class="text-2xl font-bold  text-gray-900 md:text-2xl">
                     Login
@@ -43,7 +49,7 @@
             <LoginForm  class="z-1 relative"/>
         </div>
 
-        <div class="flex justify-between items-baseline mt-[-13rem]" >
+        <div class="flex justify-between items-baseline mt-[-15rem]" >
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg"  class="w-full" width="282" height="321" viewBox="0 0 282 321" fill="none">
                     <path d="M67.0001 415.5C73.8029 599.391 -127.174 382.728 -151.768 300.481C-193.772 191.024 -46.8289 300.554 5.84615 195.758C174.157 -176.261 311.958 74.0367 275.789 202.581C246.577 390.781 49.792 246.206 67.0001 415.5Z" fill="#89C2D9"/>
@@ -58,14 +64,14 @@
             </div>
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-full" width="113" height="116" viewBox="0 0 113 116" fill="none">
-  <path d="M91.9396 33.474C82.5035 -44.0381 183.427 34.0387 197.678 67.2266C220.959 110.758 148.836 74.401 127.894 122.456C62.2449 291.767 -10.4228 195.09 2.02723 138.098C9.20599 56.2859 105.721 104.081 91.9396 33.474Z" fill="#89C2D9"/>
-  <path d="M91.9396 33.474C82.5035 -44.0381 183.427 34.0387 197.678 67.2266C220.959 110.758 148.836 74.401 127.894 122.456C62.2449 291.767 -10.4228 195.09 2.02723 138.098C9.20599 56.2859 105.721 104.081 91.9396 33.474Z" fill="url(#paint0_linear_33_4294)"/>
-  <defs>
-    <linearGradient id="paint0_linear_33_4294" x1="140.887" y1="49.2608" x2="47.128" y2="147.907" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#267FA6" stop-opacity="0"/>
-      <stop offset="1" stop-color="#C2D6DF"/>
-    </linearGradient>
-  </defs>
+                    <path d="M91.9396 33.474C82.5035 -44.0381 183.427 34.0387 197.678 67.2266C220.959 110.758 148.836 74.401 127.894 122.456C62.2449 291.767 -10.4228 195.09 2.02723 138.098C9.20599 56.2859 105.721 104.081 91.9396 33.474Z" fill="#89C2D9"/>
+                    <path d="M91.9396 33.474C82.5035 -44.0381 183.427 34.0387 197.678 67.2266C220.959 110.758 148.836 74.401 127.894 122.456C62.2449 291.767 -10.4228 195.09 2.02723 138.098C9.20599 56.2859 105.721 104.081 91.9396 33.474Z" fill="url(#paint0_linear_33_4294)"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_33_4294" x1="140.887" y1="49.2608" x2="47.128" y2="147.907" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#267FA6" stop-opacity="0"/>
+                        <stop offset="1" stop-color="#C2D6DF"/>
+                        </linearGradient>
+                    </defs>
                 </svg>
             </div>
         </div>
