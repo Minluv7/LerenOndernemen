@@ -1,7 +1,5 @@
 <template>
-   <div
-      class="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0"
-    >
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0">
     
     <div class=" w-full bg-white rounded-lg shadow-md md:mt-0 sm:max-w-md xl:p-0">
         <div class="flex justify-between mb-[-22rem]" >
@@ -18,26 +16,26 @@
                 </svg>
             </div>
             <div>
-               <svg xmlns="http://www.w3.org/2000/svg" class="w-full" height="397" viewBox="0 0 289 397" fill="none">
-  <path d="M155.268 38.2308C128.309 -111.685 324.951 36.852 355.423 100.765C403.9 184.472 265.748 115.984 232.79 209.653C131.753 539.448 -14.7742 354.111 1.34886 243.358C4.66873 84.6626 189.439 174.652 155.268 38.2308Z" fill="#89C2D9"/>
-  <path d="M155.268 38.2308C128.309 -111.685 324.951 36.852 355.423 100.765C403.9 184.472 265.748 115.984 232.79 209.653C131.753 539.448 -14.7742 354.111 1.34886 243.358C4.66873 84.6626 189.439 174.652 155.268 38.2308Z" fill="url(#paint0_linear_33_4298)"/>
-  <defs>
-    <linearGradient id="paint0_linear_33_4298" x1="247.941" y1="67.493" x2="77.195" y2="252.886" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#267FA6" stop-opacity="0"/>
-      <stop offset="1" stop-color="#C2D6DF"/>
-    </linearGradient>
-  </defs>
-</svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-full" height="397" viewBox="0 0 289 397" fill="none">
+                    <path d="M155.268 38.2308C128.309 -111.685 324.951 36.852 355.423 100.765C403.9 184.472 265.748 115.984 232.79 209.653C131.753 539.448 -14.7742 354.111 1.34886 243.358C4.66873 84.6626 189.439 174.652 155.268 38.2308Z" fill="#89C2D9"/>
+                    <path d="M155.268 38.2308C128.309 -111.685 324.951 36.852 355.423 100.765C403.9 184.472 265.748 115.984 232.79 209.653C131.753 539.448 -14.7742 354.111 1.34886 243.358C4.66873 84.6626 189.439 174.652 155.268 38.2308Z" fill="url(#paint0_linear_33_4298)"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_33_4298" x1="247.941" y1="67.493" x2="77.195" y2="252.886" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#267FA6" stop-opacity="0"/>
+                        <stop offset="1" stop-color="#C2D6DF"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
             </div>
         </div>
 
         <div class="p-6 space-y-4 md:space-y-6 sm:p-8 mt-[-12rem]">
             <a href="/">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ml-auto" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#020617" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M15 9L9 15" stroke="#020617" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9 9L15 15" stroke="#020617" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+         
+              <div class="flex justify-end">
+                    X
+                </div>
+         
             </a>
             <div class="flex flex-col items-center">
 
