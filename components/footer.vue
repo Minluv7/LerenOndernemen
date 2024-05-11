@@ -18,28 +18,30 @@
             </defs>
       </svg>
     </div>
-    <div class="absolute inset-0 flex flex-col items-start justify-end gap-1">
-        <div class="flex flex-col">
-            <h2 class="text-white underline font-bold" style="font-size: 20px; text-shadow: 0 0 black;">Over ons</h2>
-            <ul>
-                <li>Email: eb@education.business.be</li>
-                <li>Tel: +32 453 45 24 22</li>
-                <li>Brusselsesteenweg 90, 9000 Gent</li>
-                <li>BTW: BE0123.456.789</li>
-            </ul>
-        </div>
-        <div class="flex flex-col">
-            <h2 class="text-white underline font-bold" style="font-size: 20px; text-shadow: 0 0 black;">Privacy en voorwaarden</h2>
-            <ul>
-                <a href="#">
-                    <li class="underline">Privacy</li>
-                </a>
-                <a href="#">
-                    <li class="underline">Algemene voorwaarden</li>
-                </a>
-            </ul>
-        </div>
-    </div>
+
+      <div class=" footer-text absolute inset-4 flex flex-col items-start justify-end gap-1">
+          <div class="flex flex-col">
+              <h2 class="text-white underline font-bold" style="font-size: 20px; text-shadow: 0 0 black;">Over ons</h2>
+              <ul>
+                  <li>Email: eb@education.business.be</li>
+                  <li>Tel: +32 453 45 24 22</li>
+                  <li>Brusselsesteenweg 90, 9000 Gent</li>
+                  <li>BTW: BE0123.456.789</li>
+              </ul>
+          </div>
+          <div class="flex flex-col">
+              <h2 class="text-white underline font-bold" style="font-size: 20px; text-shadow: 0 0 black;">Privacy en voorwaarden</h2>
+              <ul>
+                  <a href="#">
+                      <li class="underline">Privacy</li>
+                  </a>
+                  <a href="#">
+                      <li class="underline">Algemene voorwaarden</li>
+                  </a>
+              </ul>
+          </div>
+      </div>
+ 
   </div>
 </template>
 
@@ -50,5 +52,14 @@ export default {
 </script>
 
 <style scoped>
+.footer-text {
+       flex-wrap: wrap;
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: end;
+    justify-content: left;
+}
 
 </style>
