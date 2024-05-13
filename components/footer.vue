@@ -23,20 +23,20 @@
           <div class="flex flex-col">
               <h2 class="text-white underline font-bold" style="font-size: 20px; text-shadow: 0 0 black;">Over ons</h2>
               <ul>
-                  <li>Email: eb@education.business.be</li>
-                  <li>Tel: +32 453 45 24 22</li>
-                  <li>Brusselsesteenweg 90, 9000 Gent</li>
-                  <li>BTW: BE0123.456.789</li>
+                  <li><p>Email: eb@education.business.be</p></li>
+                  <li> <p>Tel: +32 453 45 24 22</p></li>
+                  <li><p>Brusselsesteenweg 90, 9000 Gent</p></li>
+                  <li><p>BTW: BE0123.456.789</p></li>
               </ul>
           </div>
           <div class="flex flex-col">
               <h2 class="text-white underline font-bold" style="font-size: 20px; text-shadow: 0 0 black;">Privacy en voorwaarden</h2>
               <ul>
                   <a href="#">
-                      <li class="underline">Privacy</li>
+                      <li class="underline"><p>Privacy</p></li>
                   </a>
                   <a href="#">
-                      <li class="underline">Algemene voorwaarden</li>
+                      <li class="underline"><p>Algemene voorwaarden</p></li>
                   </a>
               </ul>
           </div>

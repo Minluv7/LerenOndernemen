@@ -3,7 +3,7 @@
     
     <div class=" w-full bg-white rounded-lg shadow-md md:mt-0 sm:max-w-md xl:p-0">
         
-        <div class="flex justify-between mb-[-12rem]" >
+        <div class="flex justify-between mb-[-14rem]" >
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-full" width="216" height="242" viewBox="0 0 216 242" fill="none">
                 <path d="M45.0212 189.128C-22.9799 303.615 -23.5419 54.1399 -5.03888 -5.46223C13.4642 -65.0644 33.3341 15.3499 93.2 33.9348C202.951 10.9411 253.62 151.273 183.469 215.356C93.8824 318.429 101.575 79.4657 45.0212 189.128Z" fill="#89C2D9"/>
@@ -37,12 +37,13 @@
                 </div>
             </a> 
             <div class="flex flex-col items-center">
-                <h1 class="text-2xl font-bold  text-gray-900 md:text-2xl">
-                    Login
-                </h1>
-                <div class="w-60 h-20 p-2">
+               
+                <div class="w-60 p-2">
                     <img src="/assets/image/logos/logo@2x.png" alt="logo">
                 </div>
+                 <p class="text-xl font-bold  text-gray-900 md:text-xl">
+                    Login om verder te gaan
+                </p>
             </div>
             <LoginForm  class="z-1 relative"/>
         </div>

@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="headDashboard">
-    <h1 class="mt-5 text-center [text-shadow:_0_2px_3px_rgb(22_40_54_/_50%)] font-inter flex-shrink-0">Education Business</h1>
+    <h1 class="mt-5 text-center font-inter flex-shrink-0">Education Business</h1>
   <div class="flex flex-wrap justify-center">
 
     <div class="flex justify-center mt-8">
@@ -10,7 +10,7 @@
     <div class="flex flex-col justify-center mb-20">
       <p class="pb-4">Ga vandaag nog uit je comfortzone en ontdek gratis ondernemerschap.</p>
       <p class="pb-4">Leer en groei!</p>
-      <div class="self-center">
+      <div class="">
         <CustomButton class="mb-4" label="Registreer" link="/register"/>
         <CustomButton label="Login" link="/login" variant="secondary" />
       </div>

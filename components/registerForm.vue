@@ -45,12 +45,8 @@
         required=""
       />
     </div>
-    <button
-      type="submit"
-     class="text-center"
-    >
-      Registreer
-    </button>
+   
+    <CustomButton class="w-full" label="Registreer" link="/register"/>
     <p class="text-sm flex flex-col font-light text-gray-50" >
       Heb je al een account?
       <a

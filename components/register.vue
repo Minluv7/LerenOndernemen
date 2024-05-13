@@ -2,7 +2,7 @@
     <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0">
     
     <div class=" w-full bg-white rounded-lg shadow-md md:mt-0 sm:max-w-md xl:p-0">
-        <div class="flex justify-between mb-[-22rem]" >
+        <div class="flex justify-between mb-[-24rem]" >
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-full" height="183" viewBox="0 0 144 183" fill="none">
                     <path d="M52.41 149.656C61.8461 227.168 -39.0777 149.091 -53.3283 115.903C-76.6093 72.3722 -4.48617 108.729 16.456 60.6734C82.1047 -108.637 154.772 -11.9603 142.322 45.0322C135.144 126.844 38.6289 79.0487 52.41 149.656Z" fill="#89C2D9"/>
@@ -32,20 +32,21 @@
         <div class="p-6 space-y-4 md:space-y-6 sm:p-8 mt-[-12rem]">
             <a href="/">
          
-              <div class="flex justify-end">
+              <div class="flex pt-6 justify-end">
                     X
                 </div>
          
             </a>
             <div class="flex flex-col items-center">
 
-                    <h1 class="text-2xl font-bold  text-gray-900 md:text-2xl">
-                        Registreer
-                    </h1>
+                    
            
-                <div class="w-60 h-20 p-2">
-                    <img src="/assets/image/logos/logo@2x.png" alt="logo">
+                <div class=" w-60 p-2">
+                    <img  src="/assets/image/logos/logo@2x.png" alt="logo">
                 </div>
+                <p class="text-xl font-bold  text-gray-900 md:text-xl">
+                        Registreer je nu om toegang te krijgen
+                    </p>
             </div>
             <registerForm  class="z-1 relative"/>
         </div>
