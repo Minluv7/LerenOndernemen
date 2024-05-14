@@ -1,8 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default ({
   devtools: { enabled: true },
-  modules:  ['@nuxtjs/tailwindcss', '@nuxtjs/cloudinary', "@sidebase/nuxt-auth"],
 
+  runtimeConfig: {
+    authSecret: process.env.AUTH_SECRET,
+  },
+  modules:  ['@nuxtjs/tailwindcss', '@nuxtjs/cloudinary', "@sidebase/nuxt-auth"],
+  auth: {
+    baseUrl: process.env.AUTH_ORIGIN,
+    provider: {
+        type: 'authjs'
+    },
+},
+router: {
+  middleware: 'auth' // Hier definieer je de middleware 'auth' voor alle pagina's
+},
   tailwindcss: {
     config: {
       theme: {

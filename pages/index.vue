@@ -1,3 +1,5 @@
+
+
 <template>
 <div>
   <div class="headDashboard">
@@ -38,15 +40,17 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
+definePageMeta({
+  layout: false,
+  
+})
 import Footer from "~/components/footer.vue";
 import CustomButton from "~/components/customButton.vue";
 // fetch the products
 const {data: dashboard} = await useFetch(`/api/dashboard`);
 
-definePageMeta({
-  layout: false,
-})
+
 </script>
 
 <style scoped>
