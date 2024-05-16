@@ -1,5 +1,5 @@
 <template>
-  <form class="space-y-4 md:space-y-6" action="#">
+  <form @submit.prevent="handleRegister" class="space-y-4 md:space-y-6">
     <div>
         <label
             for="userName"
@@ -7,6 +7,7 @@
             >Gebruikersnaam</label
         >
         <input
+        v-model="form.userName"
             type="text"
             name="userName"
             id="userName"
@@ -22,6 +23,7 @@
         >E-mail</label
       >
       <input
+        v-model="form.email"
         type="email"
         name="email"
         id="email"
@@ -37,6 +39,7 @@
         >Wachtwoord</label
       >
       <input
+        v-model="form.password"
         type="password"
         name="password"
         id="password"
@@ -45,8 +48,15 @@
         required=""
       />
     </div>
-   
-    <CustomButton class="w-full" label="Registreer" link="/register"/>
+   <button
+        :disabled="isLoading"
+        type="submit"
+        class="text-white bg-[#61A5C2] shadow-md border-none flex"
+        :class="{ 'opacity-20 cursor-not-allowed': isLoading }"
+      >
+        Registreer
+      </button>
+    
     <p class="text-sm flex flex-col font-light text-gray-50" >
       Heb je al een account?
       <a
@@ -57,3 +67,28 @@
     </p>
   </form>
 </template>
+
+<script lang="ts" setup >
+const form = ref({
+  userName: '',
+  email: '',
+  password: ''
+})
+
+const isLoading = ref(false);
+
+async function handleRegister(){
+  try {
+    isLoading.value = true;
+    await useFetch('/api/auth/register', {
+      method: 'POST',
+      body: form.value
+ });
+ } catch(e: any) {
+   console.error(e)
+ }
+ finally {
+   isLoading.value = false;
+ }
+}
+</script>

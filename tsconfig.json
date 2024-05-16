@@ -5,6 +5,7 @@
     "types": [
       "@nuxtjs/auth-next",
     ],
+    "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "dist",
     "strict": true,

@@ -1,12 +1,15 @@
 <template>
-  <form class="space-y-4 md:space-y-6" action="#">
+  <form @submit.prevent="handleLogin" class="space-y-4 md:space-y-6" >
+   
     <div>
+       <div v-if="loginError" class="text-red-500">{{ loginError }}</div>
       <label
         for="email"
         class="block mb-2 text-sm font-medium text-gray-900"
         >E-mail</label
       >
       <input
+      v-model="form.email"
         type="email"
         name="email"
         id="email"
@@ -22,6 +25,7 @@
         >Wachtwoord</label
       >
       <input
+      v-model="form.password"
         type="password"
         name="password"
         id="password"
@@ -37,9 +41,14 @@
         >Wachtwoord vergeten?</a
       >
     </div>
-    
-     <CustomButton class="w-full" label="Login" link="/login" variant="secondary" />
-    <p class="text-sm flex flex-col font-light text-gray-50" >
+      <button
+        type="submit"
+        @click="handleLogin"
+        class="bg-[#E1F6FF] text-color-blue shadow-md border-none flex w-full text-blue-50 rounded-lg p-2"
+      >
+        Login
+      </button>
+      <p class="text-sm flex flex-col font-light text-gray-50" >
       Heb je nog geen account?
       <a
         href="/register"
@@ -50,7 +59,37 @@
   </form>
 </template>
 
-<script setup>
+<style>
+.text-color-blue {
+  color: #7AA5B8;
+}
+</style>
 
- 
+<script lang="ts" setup>
+
+import { ref } from 'vue';
+
+
+const router = useRouter();
+
+const form = ref({
+  email: '',
+  password: ''
+});
+
+let loginError = '';
+const { signIn } = useAuth();
+
+async function handleLogin() {
+  try {
+
+    await signIn('credentials', form.value);
+
+  } catch (error) {
+    console.error('Fout bij het inloggen:', error);
+    loginError = (error as Error).message;
+  }
+}
+
+
 </script>
