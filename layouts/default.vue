@@ -17,7 +17,7 @@
           <li><NuxtLink to="/donation">Donatie</NuxtLink></li>
           <li><NuxtLink to="/profile">Profiel</NuxtLink></li>
         </ul>
-        <Logout />
+        <LogoutButton />
       </nav>
     </header>
 
