@@ -44,7 +44,6 @@
 <script lang="ts" setup>
 definePageMeta({
   layout: false,
-  
 })
 import Footer from "~/components/footer.vue";
 import CustomButton from "~/components/customButton.vue";

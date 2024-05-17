@@ -1,6 +1,6 @@
 <template>
     <div>
-        home pagina
+       <h1>Welkom {{data.user.userName}}</h1>
     </div>
 </template>
 
@@ -8,6 +8,9 @@
 definePageMeta({
   middleware: 'auth',
 })
+
+const {data} = useAuth();
+
 </script>
 
 
