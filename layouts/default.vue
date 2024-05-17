@@ -17,7 +17,7 @@
           <li><NuxtLink to="/donation">Donatie</NuxtLink></li>
           <li><NuxtLink to="/profile">Profiel</NuxtLink></li>
         </ul>
-        <NuxtLink to="/" class="btn">Loguit</NuxtLink>
+        <Logout />
       </nav>
     </header>
 
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
