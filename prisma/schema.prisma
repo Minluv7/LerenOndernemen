@@ -20,7 +20,6 @@ model Users {
   password String 
   firstName String?
   lastName String?
-  questionnaires Questionnaire[]
 }
 
 model Dashboard {
@@ -45,89 +44,19 @@ model Categories {
 
  model SubCategories {
    id Int @id @default(autoincrement())
-   name String
+   title String
    image String
+   description String?
+   avatar String?
    category_id Int
    category Categories @relation(fields: [category_id], references: [id])
-   AIVoice String
-   description String
-   title String
-   text String
-   avatar String
-   questionnaires Questionnaire[]
-    quiz Quiz[]
-    detailQuestionnaire DetailQuestionnaire[]
-    financialStatement FinancialStatement[]
-    invoice Invoice[]
+   types Types[]
  }
 
- model Questionnaire {
-   id Int @id @default(autoincrement())
-   status Boolean
-   title String
-   subCategoryId Int
-   subCategory SubCategories @relation(fields: [subCategoryId], references: [id])
-   userId Int
-   user Users @relation(fields: [userId], references: [id])
- }
-
- model DetailQuestionnaire {
-  id Int @id @default(autoincrement())
-   question String
-   answer String
-   title String
-   subCategoryId Int
-   subCategory SubCategories @relation(fields: [subCategoryId], references: [id])
-
- }
-
-
-model Quiz {
-  id Int @id @default(autoincrement())
-  status Boolean
-  title String
-  subCategoryId Int
-  subCategory SubCategories @relation(fields: [subCategoryId], references: [id])
-  answer Answer[]
-}
-
-model Answer {
-  id Int @id @default(autoincrement())
-  answer String
-  isTrue Boolean
-  quizId Int
-  quiz Quiz @relation(fields: [quizId], references: [id])
-}
-
-model FinancialStatement {
-  id Int @id @default(autoincrement())
-  title String
-  description String
-  image String
-  subCategoryId Int
-  subCategory SubCategories @relation(fields: [subCategoryId], references: [id])
-}
-
-model Invoice {
-  id Int @id @default(autoincrement())
-  title String
-  description String
-  image String
-  subCategoryId Int
-  subCategory SubCategories @relation(fields: [subCategoryId], references: [id])
-  invoiceWord InvoiceWord[]
-}
-
-model Words{
-  id Int @id @default(autoincrement())
-  word String
-  invoiceWord InvoiceWord[]
-}
-
-model InvoiceWord {
-  id Int @id @default(autoincrement())
-  wordId Int
-  word Words @relation(fields: [wordId], references: [id])
-  invoiceId Int
-  invoice Invoice @relation(fields: [invoiceId], references: [id])
+ model Types{
+    id Int @id @default(autoincrement())
+    name String
+    subCategoryId Int
+    subCategory SubCategories @relation(fields: [subCategoryId], references: [id])
+  
 }

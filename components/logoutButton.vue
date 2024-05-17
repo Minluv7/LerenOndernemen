@@ -1,6 +1,6 @@
 <template>
     <div>
-<button type="button" class="btn" @click="handleLogout">Loguit</button>
+<button type="button" class=" border-none bg-[#61A5C2]" @click="handleLogout">Loguit</button>
     </div>
 </template>
 

@@ -1,7 +1,17 @@
 <template>
     <div>
-        curses
-        <NuxtLink to="/cursess/4">meer Cursussen</NuxtLink>
+        <h1>Lessen</h1>
+        <ul v-for="c in categories" :key="c.id" >
+        
+          <li>
+            <NuxtLink :to="'/cursess/' + c.id">
+          
+           <img :src="c.image" :alt="c.name">
+             <h2>{{c.name}}</h2>
+           </NuxtLink>
+          </li>
+        
+        </ul>
     </div>
 </template>
 
@@ -10,6 +20,7 @@
 definePageMeta({
   middleware: 'auth',
 })
+const {data: categories} = await useFetch(`/api/categories`);
 
 
 </script>

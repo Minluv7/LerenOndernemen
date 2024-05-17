@@ -1,6 +1,8 @@
 <template>
-    <div>
-       <h1>Welkom {{data.user.userName}}</h1>
+    <div class="space">
+      <h1 class="text-center">Welkom {{data.user.userName}}</h1>
+      <img src="../../assets/image/homePage/home.png" alt="home_page_image">
+      
     </div>
 </template>
 
@@ -15,6 +17,9 @@ const {data} = useAuth();
 
 
 <style scoped>
-
+.space {
+  max-width: 90%;
+  margin: 0 auto;
+}
 </style>
 

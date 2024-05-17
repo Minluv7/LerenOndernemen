@@ -21,7 +21,7 @@
 
       <div class=" footer-text absolute inset-4 flex flex-col items-start justify-end gap-1">
           <div class="flex flex-col">
-              <h2 class="text-white underline font-bold" style="font-size: 20px; text-shadow: 0 0 black;">Over ons</h2>
+              <h2 class=" underline " style="font-size: 20px; text-shadow: 0 0 black;">Over ons</h2>
               <ul>
                   <li><p>Email: eb@education.business.be</p></li>
                   <li> <p>Tel: +32 453 45 24 22</p></li>
@@ -30,7 +30,7 @@
               </ul>
           </div>
           <div class="flex flex-col">
-              <h2 class="text-white underline font-bold" style="font-size: 20px; text-shadow: 0 0 black;">Privacy en voorwaarden</h2>
+              <h2 class=" underline" style="font-size: 20px; text-shadow: 0 0 black;">Privacy en voorwaarden</h2>
               <ul>
                   <a href="#">
                       <li class="underline"><p>Privacy</p></li>
