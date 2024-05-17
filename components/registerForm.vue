@@ -84,6 +84,10 @@ async function handleRegister(){
       method: 'POST',
       body: form.value
  });
+
+    useRouter().push(
+       "/login",
+    );
  } catch(e: any) {
    console.error(e)
  }
