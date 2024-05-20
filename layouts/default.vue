@@ -22,7 +22,7 @@
     </header>
 
     <!-- Mobile Navigation -->
-    <nav class="fixed bottom-0 left-0 right-0 bg-white shadow-lg" :class="{ 'hidden': !isMobile }">
+    <nav class="fixed bottom-0 left-0 right-0 bg-white shadow-lg " :class="{ 'hidden': !isMobile }">
       <ul class="flex justify-between container mx-auto p-4">
         <li><NuxtLink to="/home">
           <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">

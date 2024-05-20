@@ -3,16 +3,23 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 export default defineEventHandler(async (event) => {
-  return await prisma.categories.findMany({
+  const categories = await prisma.categories.findMany({
     include: {
       subCategories: {
         orderBy: {
           id: 'asc'
-        },
-        take: 1 // Neem alleen de eerste subcategorie
+        }
       }
     }
   });
 
+  // Voor elke categorie, haal de eerste subcategorie eruit
+  const categoriesWithFirstSubCategory = categories.map(category => {
+    return {
+      ...category,
+      subCategories: category.subCategories.length > 0 ? [category.subCategories[0]] : []
+    }
+  });
 
+  return categoriesWithFirstSubCategory;
 });

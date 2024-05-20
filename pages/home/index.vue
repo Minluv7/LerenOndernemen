@@ -1,21 +1,28 @@
 <template>
   <div class="space">
-    <h1 class="text-center">Welkom {{ data.user.userName }}</h1>
-    <img src="/assets/image/homePage/home.png" alt="home_page_image">
-    <div v-if="subCategories">
-      <h2>Onze verschillende lessen</h2>
-      <ul>
-        <li v-for="sub in subCategories" :key="sub.id">
-          <h3>{{ sub.name }}</h3>
-          <img :src="sub.image" :alt="sub.title">
-        </li>
-      </ul>
+    <div class="flex items-center pt-6 flex-col">
+      <h1 class="text-center">Welkom {{ data.user.userName }}</h1>
+      <img src="/assets/image/homePage/home.png" alt="home_page_image">
     </div>
-    <div v-if="motivations.length">
-      <h2>Motivatie van de dag</h2>
+    
+    <div class="pt-16 pb-16">
+      <h2>Onze verschillende lessen</h2>
+      <div >
+         <ul class="grid-container" >
+          <li v-for="category in categories" :key="category.id" class="grid-item">
+            <div v-if="category.subCategories.length > 0">
+              <img class="w-60" :src="category.subCategories[0].image" :alt="category.subCategories[0].title">
+              <h3 class="text-center">{{ category.subCategories[0].title }}</h3>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="pb-32">
+      <h2 class="pb-8">Motivatie van de dag</h2>
       <div>
         <ul>
-          <li>
+          <li class="blur-border w-full">
             {{ dailyMotivation.quote }}
           </li>
         </ul>
@@ -42,7 +49,7 @@ interface Motivation {
 const { data } = useAuth();
 
 // Fetch subcategories
-const { data: subCategories } = await useFetch('/api/firstSubCategories');
+const { data: categories } = await useFetch('/api/firstSubCategories');
 
 // Fetch motivations data
 const motivations = ref<Motivation[]>([]);
@@ -84,4 +91,28 @@ onMounted(async () => {
   max-width: 90%;
   margin: 0 auto;
 }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 3rem;
+    align-items: baseline;
+    justify-items: center;
+}
+
+.grid-item {
+  list-style: none; 
+  padding: 0;
+}
+
+.blur-border {
+  display: inline-block; 
+  padding: 1rem; 
+  background: #e7eff8; 
+  border: .125rem solid transparent; 
+  border-radius: 1rem;
+  box-shadow: 0 0 .625rem .3125rem rgba(1, 58, 99, 0.5);
+}
+
+
 </style>
