@@ -11,8 +11,10 @@
          <ul class="grid-container" >
           <li v-for="category in categories" :key="category.id" class="grid-item">
             <div v-if="category.subCategories.length > 0">
+               <NuxtLink :to="`/${category.subCategories[0].slug}`" class="flex flex-col gap-4 items-center">
               <img class="w-60" :src="category.subCategories[0].image" :alt="category.subCategories[0].title">
               <h3 class="text-center">{{ category.subCategories[0].title }}</h3>
+              </NuxtLink>
             </div>
           </li>
         </ul>

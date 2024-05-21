@@ -4,7 +4,7 @@
         <div>
           <ul class="grid-container pt-8 pb-20">
             <li v-for="c in categories" :key="c.id" class="grid-item" >
-              <NuxtLink :to="`/cursess/${c.id}`" class="flex flex-col gap-4 items-center">
+              <NuxtLink :to="`/curses/${c.id}`" class="flex flex-col gap-4 items-center">
                 <h2>{{c.name}}</h2>
                 <img  :src="c.image" :alt="c.name">
               </NuxtLink>
