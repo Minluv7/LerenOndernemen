@@ -20,6 +20,7 @@ model Users {
   password String 
   firstName String?
   lastName String?
+  subCategories SubCategories[]
 }
 
 model Dashboard {
@@ -45,9 +46,12 @@ model Categories {
  model SubCategories {
    id Int @id @default(autoincrement())
    title String
+   slug String
    image String
    description String?
    avatar String?
+   user_id Int?
+   user Users? @relation(fields: [user_id], references: [id])
    category_id Int
    category Categories @relation(fields: [category_id], references: [id])
    types Types[]
