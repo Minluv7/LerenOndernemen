@@ -1,6 +1,6 @@
 <template>
     <div>
-<h1>business-plan</h1>
+  <lessonsPages />
     </div>
 </template>
 

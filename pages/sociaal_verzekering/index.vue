@@ -1,6 +1,6 @@
 <template>
     <div>
-<h1>sociaal verzekering</h1>
+  <lessonsPages />
     </div>
 </template>
 

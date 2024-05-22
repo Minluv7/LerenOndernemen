@@ -1,6 +1,6 @@
 <template>
     <div>
-<h1>eenmanszaak vs vennootschap</h1>
+  <lessonsPages />
     </div>
 </template>
 

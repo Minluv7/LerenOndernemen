@@ -1,6 +1,6 @@
 <template>
     <div>
-<h1>Belgisch staatsblad</h1>
+  <lessonsPages />
     </div>
 </template>
 

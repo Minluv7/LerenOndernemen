@@ -1,10 +1,10 @@
 <template>
     <div>
-<h1>facturatie</h1>
+        <lessonsPages />
     </div>
 </template>
 
-<script setup lang="ts">
+<script >
 
 </script>
 

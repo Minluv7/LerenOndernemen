@@ -1,3 +1,4 @@
+
 -- CreateTable
 CREATE TABLE "Dashboard" (
     "id" SERIAL NOT NULL,

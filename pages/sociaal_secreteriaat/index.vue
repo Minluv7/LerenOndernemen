@@ -1,6 +1,6 @@
 <template>
     <div>
-<h1>sociaal secreteriaat</h1>
+  <lessonsPages />
     </div>
 </template>
 

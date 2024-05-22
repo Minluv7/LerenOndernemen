@@ -1,6 +1,6 @@
 <template>
     <div>
-<h1>jaarrekening winst-verlies, pb vs vb</h1>
+  <lessonsPages />
     </div>
 </template>
 

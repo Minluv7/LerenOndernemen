@@ -30,12 +30,6 @@ model Dashboard {
   image String
 }
 
-model MotivationDay {
-  id Int @id @default(autoincrement())
-  date DateTime
-  motivation String
-}
-
 model Categories {
   id Int @id @default(autoincrement())
   name String
@@ -46,7 +40,7 @@ model Categories {
  model SubCategories {
    id Int @id @default(autoincrement())
    title String
-   slug String
+   slug String @unique
    image String
    description String?
    avatar String?

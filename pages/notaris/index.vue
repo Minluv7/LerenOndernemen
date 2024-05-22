@@ -1,10 +1,10 @@
 <template>
     <div>
-<h1>notaris</h1>
+        <lessonsPages />
     </div>
 </template>
 
-<script setup lang="ts">
+<script >
 
 </script>
 

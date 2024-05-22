@@ -1,4 +1,3 @@
-
 -- CreateTable
 CREATE TABLE "Categories" (
     "id" SERIAL NOT NULL,

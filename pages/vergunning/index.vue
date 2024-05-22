@@ -1,6 +1,6 @@
 <template>
     <div>
-<h1>vergunningen</h1>
+  <lessonsPages />
     </div>
 </template>
 

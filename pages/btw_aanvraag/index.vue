@@ -1,6 +1,6 @@
 <template>
     <div>
-<h1>btw aanvraag</h1>
+  <lessonsPages />
     </div>
 </template>
 
