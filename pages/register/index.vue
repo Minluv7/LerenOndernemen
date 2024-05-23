@@ -1,8 +1,5 @@
 <template>
-
-<register />
-
-
+  <register />
 </template>
 
 <script setup lang="ts">
