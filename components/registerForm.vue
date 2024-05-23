@@ -1,5 +1,39 @@
 <template>
   <form @submit.prevent="handleRegister" class="space-y-4 md:space-y-6">
+    <div class="flex justify-between">
+      <div>
+        <label 
+          for="lastName"  
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Naam</label
+          >
+        <input
+          v-model="form.firstName"
+          type="text"
+          name="name"
+          id="name"
+          class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+          placeholder="naam"
+          required=""
+        />
+      </div>
+      <div>
+        <label
+          for="firstName"
+          class="block mb-2 text-sm font-medium text-gray-900"
+          >Voornaam</label
+        >
+        <input
+          v-model="form.lastName"
+          type="text"
+          name="voorname"
+          id="voorname"
+          class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+          placeholder="Voornaam"
+          required=""
+        />
+      </div>
+    </div>
     <div>
         <label
             for="userName"
@@ -32,7 +66,7 @@
         required=""
       />
     </div>
-    <div>
+    <div >
       <label
         for="password"
         class="block mb-2 text-sm font-medium text-gray-900 "
@@ -51,20 +85,13 @@
    <button
         :disabled="isLoading"
         type="submit"
-        class="text-white bg-[#61A5C2] shadow-md border-none flex"
+        class="text-white shadow-md border-none flex"
         :class="{ 'opacity-20 cursor-not-allowed': isLoading }"
       >
         Registreer
       </button>
     
-    <p class="text-sm flex flex-col font-light text-gray-50" >
-      Heb je al een account?
-      <a
-        href="/login"
-        class="font-medium text-primary-600 hover:underline"
-        >Login</a
-      >
-    </p>
+    
   </form>
 </template>
 

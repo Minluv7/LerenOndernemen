@@ -2,9 +2,9 @@
     <div>
         <div>
             <div v-for="sub in subCategories" :key="sub.id">
-            <h1>{{ sub.title }}</h1>
-            <img :src="sub.avatar" alt="avatar" />
-            <p>{{ sub.description }}</p>
+                <h1>{{ sub.title }}</h1>
+                <img :src="sub.avatar" alt="avatar" />
+                <p>{{ sub.description }}</p>
             </div>
         </div>
     </div>

@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
 
     const body = await readBody(event);
 
-    if(!body.email || !body.password || !body.userName) {
+    if(!body.email || !body.password || !body.userName || !body.firstName || !body.lastName) {
 
         throw createError({
             statusCode: 400,
@@ -38,7 +38,9 @@ export default defineEventHandler(async (event) => {
         data: {
             userName: body.userName,
             email: body.email,
-            password: hashedPassword
+            password: hashedPassword,
+            firstName: body.firstName,
+            lastName: body.lastName
         }
     });
 

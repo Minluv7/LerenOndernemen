@@ -1,9 +1,9 @@
 <template>
    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0">
     
-    <div class=" w-full bg-white rounded-lg shadow-md md:mt-0 sm:max-w-md xl:p-0">
+    <div class=" w-full h-full bg-white rounded-lg shadow-md md:mt-0 sm:max-w-md xl:p-0">
         
-        <div class="flex justify-between mb-[-14rem]" >
+        <!-- <div class="flex justify-between mb-[-14rem]" >
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-full" width="216" height="242" viewBox="0 0 216 242" fill="none">
                 <path d="M45.0212 189.128C-22.9799 303.615 -23.5419 54.1399 -5.03888 -5.46223C13.4642 -65.0644 33.3341 15.3499 93.2 33.9348C202.951 10.9411 253.62 151.273 183.469 215.356C93.8824 318.429 101.575 79.4657 45.0212 189.128Z" fill="#89C2D9"/>
@@ -28,9 +28,9 @@
                 </defs>
                 </svg>
             </div>
-        </div>
+        </div> -->
 
-        <div class="p-6 space-y-4 md:space-y-6 sm:p-8 mt-[-12rem]">
+        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
             <a href="/">
                 <div class="flex justify-end">
                     X
@@ -38,17 +38,25 @@
             </a> 
             <div class="flex flex-col items-center">
                
-                <div class="w-60 p-2">
+                <div class="w-40 p-2">
                     <img src="/assets/image/logos/logo@2x.png" alt="logo">
                 </div>
                  <p class="text-xl font-bold  text-gray-900 md:text-xl">
                     Login om verder te gaan
                 </p>
             </div>
-            <LoginForm  class="z-1 relative"/>
+            <LoginForm />
+            <p class="text-sm flex flex-col font-light" >
+                Heb je nog geen account?
+                <a
+                    href="/register"
+                    class="font-medium text-primary-600 hover:underline"
+                    >Registreer
+                </a>
+            </p>
         </div>
 
-        <div class="flex justify-between items-baseline mt-[-15rem]" >
+        <!-- <div class="flex justify-between items-baseline mt-[-15rem]" >
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg"  class="w-full" width="282" height="321" viewBox="0 0 282 321" fill="none">
                     <path d="M67.0001 415.5C73.8029 599.391 -127.174 382.728 -151.768 300.481C-193.772 191.024 -46.8289 300.554 5.84615 195.758C174.157 -176.261 311.958 74.0367 275.789 202.581C246.577 390.781 49.792 246.206 67.0001 415.5Z" fill="#89C2D9"/>
@@ -73,16 +81,14 @@
                     </defs>
                 </svg>
             </div>
-        </div>
+        </div> -->
     </div>
     
     </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+
 </script>
 
 <style scoped>

@@ -44,18 +44,11 @@
       <button
         type="submit"
         @click="handleLogin"
-        class="bg-[#E1F6FF] text-color-blue shadow-md border-none flex w-full text-blue-50 rounded-lg p-2"
+        class=" shadow-md border-none flex w-full text-blue-50 rounded-lg p-2"
       >
         Login
       </button>
-      <p class="text-sm flex flex-col font-light text-gray-50" >
-      Heb je nog geen account?
-      <a
-        href="/register"
-        class="font-medium text-primary-600 hover:underline"
-        >Registreer</a
-      >
-    </p>
+     
   </form>
 </template>
 
