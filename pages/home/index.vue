@@ -2,7 +2,7 @@
   <div class="space">
     <div class="flex items-center pt-6 flex-col">
       <h1 class="text-center">Welkom {{ data.user.userName }}</h1>
-      <p>Leer vandaag hoe je moet beginnen met ondernemen.</p>
+      <p>Leer vandaag meer over ondernemerschap.</p>
       <img src="/assets/image/homePage/home.png" alt="home_page_image">
     </div>
     <homeSubCategory/>
