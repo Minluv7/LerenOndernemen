@@ -1,12 +1,12 @@
 <template>
     <div v-for="sub in subCategories" :key="sub.id">
         <h2 cl>{{ sub.title }}</h2>
-        <div class="flex bg-[#f1f9fa] p-4 mt-4" >
+        <div class="flex bg-[#f1f9fa] p-4 mt-4 rounded-[2rem]" >
             <img  :src="sub.avatar" alt="avatar"  class="avatar-img pr-2" />
             <div>
                 <p>{{ splitDescription(sub.description).firstLine }}</p>
                 <p class="pt-4">{{splitDescription(sub.description).remainingText}}</p>
-                <div class="flex pt-4">
+                <div class="flex max-w-[18rem] gap-4 pt-4">
                     <button @click="speak(sub.description)" class="speak-button border-none">▶️ Afspelen</button>
                     <button @click="pauseOrResume()" class="pause-button border-none"> {{ isPaused ? '🔊 Verder' : '⏸ Pauze' }}</button>
                 </div>
@@ -93,8 +93,8 @@ onMounted(() => {
 
 <style scoped>
 .avatar-img {
-    width: 10rem; 
-    height: 15rem; 
+    width: 12rem; 
+    height: 25rem; 
     object-fit: cover;
 }
 

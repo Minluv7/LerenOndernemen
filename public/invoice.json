@@ -1,0 +1,115 @@
+{
+    "invoice": {
+      "title": "Een facturen leren opmaken",
+      "description": "Tim heeft een bedrijf en hij verkoopt werkkleding aan ondernemingen. Marie koopt op 16 juni voor haar werknemers 3 t-shirts en 1 paar schoenen bij Tim. In totaal betaalt ze 338,80 euro aan Tim. Hiervan kan zij 58,80 euro aftrekken van de btw. Uiterlijk moet ze de factuur betalen tegen 30 juni.",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Wat is de datum van de factuur?",
+          "answer_id": 1,
+          "image": ""
+        },
+        {
+          "id": 2,
+          "question": "Wat is het BTW-percentage?",
+          "answer_id": 2,
+          "image": ""
+        },
+        {
+          "id": 3,
+          "question": "Wat is de vervaldatum van de factuur?",
+          "answer_id": 4,
+          "image": ""
+        },
+        {
+          "id": 4,
+          "question": "Wat is het factuurnummer?",
+          "answer_id": 6,
+          "image": ""
+        },
+        {
+          "id": 5,
+          "question": "Wat is de naam, adres, btw nr... van de klant?",
+          "answer_id": 7,
+          "image": ""
+        },
+        {
+          "id": 6,
+          "question": "Wat is de naam, adres, btw nr... van de leverancier?",
+          "answer_id": 8,
+          "image": ""
+        },
+        {
+          "id": 7,
+          "question": "Wat is de omschrijving van de factuur?",
+          "answer_id": 9,
+          "image": ""
+        },
+        {
+          "id": 8,
+          "question": "Wat is het totale bedrag exclusief btw?",
+          "answer_id": 10,
+          "image": ""
+        },
+        {
+          "id": 9,
+          "question": "Wat is het totale bedrag inclusief btw?",
+          "answer_id": 3,
+          "image": ""
+        },
+        {
+          "id": 10,
+          "question": "Wat is het totale bedrag van de btw?",
+          "answer_id": 11,
+          "image": ""
+        }
+      ],
+      "answers": [
+        {
+          "id": 1,
+          "answer": "16 juni 2024"
+        },
+        {
+          "id": 2,
+          "answer": "21%"
+        },
+        {
+          "id": 3,
+          "answer": "338,80 euro"
+        },
+        {
+          "id": 4,
+          "answer": "30 juni 2024"
+        },
+        {
+          "id": 5,
+          "answer": "58,80 euro"
+        },
+        {
+          "id": 6,
+          "answer": "29"
+        },
+        {
+          "id": 7,
+          "answer": "Marie nv, Hooi 88, 1000 Brussel\nBTW: BE0146.466.234\nTelefoon: 053 99 95 93"
+        },
+        {
+          "id": 8,
+          "answer": "Tim bv, Langgemuntlaan 77, 9000 Gent\nBTW: BE0148.939.939\nTelefoon: 046 35 96 36"
+        },
+        {
+          "id": 9,
+          "answer": "T-shirt Flsk 3 voor €45,00 per stuk en\nschoenen Flsk 1 voor €145,00 per stuk"
+        },
+        {
+          "id": 10,
+          "answer": "280,00 euro"
+        },
+        {
+          "id": 11,
+          "answer": "58,80 euro"
+        }
+      ]
+    }
+  }
+  

@@ -1,7 +1,15 @@
 <template>
-    <div>
-        <lessonsPages />
-        <NuxtLink :to="'/factuur/factuur_leren_opmaken'" v-if="invoice">{{ invoice.title }}</NuxtLink>
+    <div v-if="invoice">
+       
+        <h1>{{ invoice.title }}</h1>
+        <p>{{ invoice.description }}</p>
+        <p>Geef de juiste antwoord om de factuur te vervolledigen.</p>
+         <ul v-for="item in invoice.questions" :key="item.id">
+            <li>{{item.question}}</li>
+        </ul>
+        <ul v-for="item in invoice.answers" :key="item.id">
+            <li>{{item.answer}}</li>
+        </ul>
     </div>
 </template>
 
