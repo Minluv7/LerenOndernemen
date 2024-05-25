@@ -1,38 +1,41 @@
 <template>
-  <div v-if="invoice" class="space">
+<div v-if="invoice" class="space">
     <button class="w-20 border-none mb-8" @click="goBack"> Terug</button>
-    <div class="mb-8">
-      <div class="mb-4">
-        <h2>{{ invoice.title }}</h2>
-        <p>{{ invoice.description }}</p>
+    <div class="flex flex-col lg:flex-row gap-4">
+      <div class="mb-8 w-full lg:w-1/2">
+        <div class="mb-4">
+          <h2>{{ invoice.title }}</h2>
+          <p>{{ invoice.description }}</p>
+        </div>
+        <div class="flex justify-center items-center">
+          <img :src="currentImage" alt="Factuur afbeelding">
+        </div>
       </div>
-     <div class="flex justify-center items-center">
-  <img :src="currentImage" alt="Factuur afbeelding" >
-</div>
 
-      
+      <div class="mt-4 w-full lg:w-1/2" v-if="currentQuestionIndex < invoice.questions.length">
+        <p>Geef de juiste antwoord om de factuur te vervolledigen.</p>
+        <h2 class="mb-4">{{ currentQuestion.question }}</h2>
+        <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
+        <ul class="flex flex-wrap gap-1 justify-start">
+          <li v-for="answer in invoice.answers" :key="answer.id">
+            <button class="max-w-fit" @click="checkAnswer(answer.id)">{{ answer.answer }}</button>
+          </li>
+        </ul>
+      </div>
+      <div v-else>
+        <p>Je hebt alle vragen beantwoord!</p>
+        <ConfettiExplosion />
+      </div>
     </div>
-    <p>Geef de juiste antwoord om de factuur te vervolledigen.</p>
-    
-    <div class="mt-4" v-if="currentQuestionIndex < invoice.questions.length">
-      <h2 class="mb-4">{{ currentQuestion.question }}</h2>
-      <p  v-if="errorMessage" class="error">{{ errorMessage }}</p>
-      <ul class="flex flex-wrap gap-1 justify-start">
-        <li v-for="answer in invoice.answers" :key="answer.id">
-          <button class="max-w-fit" @click="checkAnswer(answer.id)">{{ answer.answer }}</button>
-        </li>
-      </ul>
-    </div>
-    <div v-else>
-      <p>Je hebt alle vragen beantwoord!</p>
-       <ConfettiExplosion />
-    </div>
-    
   </div>
 </template>
 
 <script setup lang="ts">
 import ConfettiExplosion from 'vue-confetti-explosion'
+
+definePageMeta({
+  middleware: 'auth',
+})
 
 const router = useRouter()
 

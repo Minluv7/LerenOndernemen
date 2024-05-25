@@ -15,6 +15,9 @@
 
 <script setup lang="ts">
 const excelFilePath = '/factuur_sjabloon.xlsx'
+definePageMeta({
+  middleware: 'auth',
+})
 
 </script>
 
