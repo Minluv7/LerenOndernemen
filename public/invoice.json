@@ -7,61 +7,62 @@
           "id": 1,
           "question": "Wat is de datum van de factuur?",
           "answer_id": 1,
-          "image": ""
+          "image": "/img/invoice/1.png"
         },
         {
           "id": 2,
           "question": "Wat is het BTW-percentage?",
           "answer_id": 2,
-          "image": ""
+          "image": "/img/invoice/2.png"
         },
         {
           "id": 3,
           "question": "Wat is de vervaldatum van de factuur?",
           "answer_id": 4,
-          "image": ""
+          "image": "/img/invoice/3.png"
         },
         {
           "id": 4,
           "question": "Wat is het factuurnummer?",
           "answer_id": 6,
-          "image": ""
+          "image": "/img/invoice/4.png"
         },
         {
           "id": 5,
           "question": "Wat is de naam, adres, btw nr... van de klant?",
           "answer_id": 7,
-          "image": ""
+          "image": "/img/invoice/5.png"
         },
         {
           "id": 6,
           "question": "Wat is de naam, adres, btw nr... van de leverancier?",
           "answer_id": 8,
-          "image": ""
+          "image": "/img/invoice/6.png"
         },
         {
           "id": 7,
           "question": "Wat is de omschrijving van de factuur?",
           "answer_id": 9,
-          "image": ""
+          "image": "/img/invoice/7.png"
         },
         {
           "id": 8,
           "question": "Wat is het totale bedrag exclusief btw?",
           "answer_id": 10,
-          "image": ""
+          "image": "/img/invoice/8.png"
         },
+        
         {
           "id": 9,
-          "question": "Wat is het totale bedrag inclusief btw?",
-          "answer_id": 3,
-          "image": ""
+          "question": "Wat is het totale bedrag van de btw?",
+          "answer_id": 11,
+          "image": "/img/invoice/9.png"
         },
         {
           "id": 10,
-          "question": "Wat is het totale bedrag van de btw?",
-          "answer_id": 11,
-          "image": ""
+          "question": "Wat is het totale bedrag inclusief btw?",
+          "answer_id": 3,
+          "image": "/img/invoice/10.png"
         }
       ],
       "answers": [
@@ -80,10 +81,6 @@
         {
           "id": 4,
           "answer": "30 juni 2024"
-        },
-        {
-          "id": 5,
-          "answer": "58,80 euro"
         },
         {
           "id": 6,

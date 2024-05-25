@@ -1,35 +1,87 @@
 <template>
-    <div v-if="invoice">
-       
-        <h1>{{ invoice.title }}</h1>
+  <div v-if="invoice" class="space">
+    <button class="w-20 border-none mb-8" @click="goBack"> Terug</button>
+    <div class="mb-8">
+      <div class="mb-4">
+        <h2>{{ invoice.title }}</h2>
         <p>{{ invoice.description }}</p>
-        <p>Geef de juiste antwoord om de factuur te vervolledigen.</p>
-         <ul v-for="item in invoice.questions" :key="item.id">
-            <li>{{item.question}}</li>
-        </ul>
-        <ul v-for="item in invoice.answers" :key="item.id">
-            <li>{{item.answer}}</li>
-        </ul>
+      </div>
+     <div class="flex justify-center items-center">
+  <img :src="currentImage" alt="Factuur afbeelding" >
+</div>
+
+      
     </div>
+    <p>Geef de juiste antwoord om de factuur te vervolledigen.</p>
+    
+    <div class="mt-4" v-if="currentQuestionIndex < invoice.questions.length">
+      <h2 class="mb-4">{{ currentQuestion.question }}</h2>
+      <p  v-if="errorMessage" class="error">{{ errorMessage }}</p>
+      <ul class="flex flex-wrap gap-1 justify-start">
+        <li v-for="answer in invoice.answers" :key="answer.id">
+          <button class="max-w-fit" @click="checkAnswer(answer.id)">{{ answer.answer }}</button>
+        </li>
+      </ul>
+    </div>
+    <div v-else>
+      <p>Je hebt alle vragen beantwoord!</p>
+       <ConfettiExplosion />
+    </div>
+    
+  </div>
 </template>
 
 <script setup lang="ts">
+import ConfettiExplosion from 'vue-confetti-explosion'
+
+const router = useRouter()
 
 const invoice = ref<Invoice | null>(null)
-const fetchInvoice = async () => {
-try {
-  const response = await fetch('/invoice.json')
-  const dataInvoice = await response.json()
-   //@ts-ignore
-  invoice.value = dataInvoice.invoice as Invoice[];
+const currentQuestionIndex = ref(0)
+const errorMessage = ref<string | null>(null)
 
-} catch (error) {
+const fetchInvoice = async () => {
+  try {
+    const response = await fetch('/invoice.json')
+    const dataInvoice = await response.json()
+    //@ts-ignore
+    invoice.value = dataInvoice.invoice as Invoice
+     
+  } catch (error) {
     console.error('Failed to fetch invoice:', error)
-    }
+  }
 }
+
+const checkAnswer = (answerId: number) => {
+  if (invoice.value && invoice.value.questions[currentQuestionIndex.value].answer_id === answerId) {
+    currentQuestionIndex.value++
+     errorMessage.value = null 
+  } else {
+    errorMessage.value = 'Fout antwoord. Probeer het opnieuw.'
+  }
+}
+
 onMounted(fetchInvoice)
+
+const currentQuestion = computed(() => {
+  return invoice.value ? invoice.value.questions[currentQuestionIndex.value] : null
+})
+const goBack = () => {
+    router.back()
+}
+
+const currentImage = computed(() => {
+  return invoice.value && currentQuestionIndex.value > 0
+    ? invoice.value.questions[currentQuestionIndex.value - 1].image
+    : '/img/invoice/0.png'
+})
+
 </script>
 
-<style scoped>
 
+<style scoped>
+.space {
+  max-width: 90%;
+  margin: 0 auto;
+}
 </style>
