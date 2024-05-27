@@ -9,7 +9,7 @@
       </div>
     </header>
 
-     <!-- Desktop Navigation -->
+    <!-- Desktop Navigation -->
     <header class="shadow-sm bg-white" :class="{ 'hidden': isMobile }">
       <nav class="container mx-auto p-4 flex justify-between">
         <ul class="flex text-[#013A63] gap-12">
