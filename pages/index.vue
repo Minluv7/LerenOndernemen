@@ -48,7 +48,6 @@ import CustomButton from "~/components/customButton.vue";
 // fetch the products
 const {data: dashboard} = await useFetch(`/api/dashboard`);
 
-
 </script>
 
 <style scoped>

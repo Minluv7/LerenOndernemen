@@ -1,6 +1,6 @@
 <template>
     <div>
-  <lessonsPages />
+      <lessonsPages />
     </div>
 </template>
 

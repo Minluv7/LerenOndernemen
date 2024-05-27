@@ -6,9 +6,8 @@
 
 <script>
 import login from '~/components/login.vue'
-    export default {
+  export default {
   components: { login },
-        
     }
     definePageMeta({
   layout: false,
