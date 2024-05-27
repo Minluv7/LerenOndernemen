@@ -4,6 +4,7 @@ export default ({
 
   runtimeConfig: {
     authSecret: process.env.AUTH_SECRET,
+    databaseUrl: process.env.DATABASE_URL, 
   },
 
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/cloudinary', "@sidebase/nuxt-auth"],
