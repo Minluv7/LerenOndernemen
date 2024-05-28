@@ -30,10 +30,10 @@
           </div>
       </li>
     </ul>
-   <div class="flex items-center flex-col justify-center mb-20">
+    <div class="flex items-center flex-col justify-center mb-20">
       <h2 class="p-8">Leer ondernemen met Education Business</h2>
       <CustomButton  label="Registreer" link="/register"/>
-   </div>
+    </div>
     </div>
     <Footer />
   </div>
