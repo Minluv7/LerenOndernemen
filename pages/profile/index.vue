@@ -1,6 +1,7 @@
 <template>
     <div>
         profile
+        <logout-button/>
     </div>
 </template>
 

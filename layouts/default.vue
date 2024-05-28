@@ -1,29 +1,24 @@
 <template>
 
   <div>
-    <!-- Navigation -->
-    <header class="shadow-sm bg-white">
-      <!-- Logo -->
-      <div class="container mx-auto p-4">
-        <NuxtLink to="/home" class="font-bold"><img src="assets/image/logos/Logo.png" alt="Logo"></NuxtLink>
-      </div>
-    </header>
 
     <!-- Desktop Navigation -->
     <header class="shadow-sm bg-white" :class="{ 'hidden': isMobile }">
       <nav class="container mx-auto p-4 flex justify-between">
-        <ul class="flex text-[#013A63] gap-12">
-          <li><NuxtLink to="/home">Home</NuxtLink></li>
+        <ul class="flex items-center text-[#013A63] gap-12">
+          <li><NuxtLink to="/home" class="font-bold"><img src="assets/image/logos/Logo.png" alt="Logo"></NuxtLink>
+          </li>
           <li><NuxtLink to="/curses">Cursussen</NuxtLink></li>
           <li><NuxtLink to="/donation">Donatie</NuxtLink></li>
           <li><NuxtLink to="/profile">Profiel</NuxtLink></li>
         </ul>
-        <LogoutButton />
+       
       </nav>
     </header>
 
     <!-- Mobile Navigation -->
-    <nav class="fixed bottom-0 left-0 right-0 bg-white shadow-lg " :class="{ 'hidden': !isMobile }">
+    <header class="navigation fixed bottom-0 left-0 right-0 bg-white shadow-lg " :class="{ 'hidden': !isMobile }">
+    <nav class="">
       <ul class="flex justify-between container mx-auto p-4">
         <li><NuxtLink to="/home">
           <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
@@ -54,7 +49,7 @@
         </NuxtLink></li>
       </ul>
     </nav>
-
+</header>
     <!-- Page content -->
     <div class="container mx-auto p-4">
       <slot />
@@ -89,4 +84,5 @@ export default {
 .router-link-active {
   color: #7aa5b8;
 }
+
 </style>

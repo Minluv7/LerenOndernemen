@@ -1,10 +1,10 @@
 <template>
     <div>
         <ul class="grid-container pt-8 pb-20">
-            <li v-for="c in categories" :key="c.id" class="grid-item" >
-            <NuxtLink :to="`/curses/${c.id}`" class="flex flex-col gap-4 items-center">
-                <h2>{{c.name}}</h2>
+            <li v-for="c in categories" :key="c.id" class="grid-item rounded-3xl bg-[#61A5C2] flex" >
+            <NuxtLink :to="`/curses/${c.id}`" class="flex flex-col p-4 gap-4 items-center justify-between">
                 <img  :src="c.image" :alt="c.name">
+                <h2>{{c.name}}</h2>
             </NuxtLink>
             </li>
         </ul>
@@ -24,8 +24,7 @@ const {data: categories} = await useFetch(`/api/categories`);
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 2rem;
-    align-items: baseline;
-    justify-items: center;
+    align-items: stretch;
 }
 
 .grid-item {

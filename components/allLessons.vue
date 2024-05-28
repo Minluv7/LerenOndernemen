@@ -1,12 +1,12 @@
 <template>
     <div class="space">
- <h1 class="text-center pt-8">{{ category.name }}</h1>
+      <h1 class="text-center pt-8">{{ category.name }}</h1>
     <div class="flex justify-center">
     <ul class="grid-container pt-8 pb-20">
-      <li v-for="sub in category.subCategories" :key="sub.id" class="grid-item">
-        <NuxtLink :to="`/${sub.slug}`" class="flex flex-col gap-4 items-center">
-        <img class="w-60" :src="sub.image" :alt="sub.title">
-        <h3>{{ sub.title }}</h3>
+      <li v-for="sub in category.subCategories" :key="sub.id" class="grid-item rounded-3xl bg-[#BADBE7]">
+        <NuxtLink :to="`/${sub.slug}`" class="flex flex-col p-4 gap-4 items-center justify-between">
+          <img class="" :src="sub.image" :alt="sub.title">
+          <h3>{{ sub.title }}</h3>
         </NuxtLink>
       </li>
     </ul>
@@ -37,8 +37,7 @@ const { data: category } = await useFetch(`/api/category/${route.params.id}`);
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 2rem;
-  align-items: baseline;
-  justify-items: center;
+  align-items: stretch;
 }
 
 .grid-item {

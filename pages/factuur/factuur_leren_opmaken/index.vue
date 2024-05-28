@@ -1,7 +1,7 @@
 <template>
 <div v-if="invoice" class="space">
     <button class="w-20 border-none mb-8" @click="goBack"> Terug</button>
-    <div class="flex flex-col lg:flex-row gap-4">
+    <div class="flex flex-col mb-20 lg:flex-row gap-4">
       <div class="mb-8 w-full lg:w-1/2">
         <div class="mb-4">
           <h2>{{ invoice.title }}</h2>
@@ -24,6 +24,7 @@
       </div>
       <div v-else>
         <p>Je hebt alle vragen beantwoord!</p>
+        <button class="w-20 border-none mb-8" @click="goBack"> eindigen</button>
         <ConfettiExplosion />
       </div>
     </div>

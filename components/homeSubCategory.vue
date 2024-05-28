@@ -1,13 +1,13 @@
 <template>
-    <div class="pt-16 pb-16">
+    <div class="pt-16 pb-10">
       <h2>Onze verschillende lessen</h2>
-      <div >
-         <ul class="grid-container" >
-          <li v-for="category in categories" :key="category.id" class="grid-item">
-            <div v-if="category.subCategories.length > 0">
-               <NuxtLink :to="`/${category.subCategories[0].slug}`" class="flex flex-col gap-4 items-center">
-              <img class="w-60" :src="category.subCategories[0].image" :alt="category.subCategories[0].title">
-              <h3 class="text-center">{{ category.subCategories[0].title }}</h3>
+      <div>
+        <ul class="grid-container pt-8 pb-20">
+          <li v-for="category in categories" :key="category.id" class="grid-item rounded-3xl bg-[#BADBE7]">
+            <div  v-if="category.subCategories.length > 0">
+              <NuxtLink :to="`/${category.subCategories[0].slug}`" class="flex flex-col p-4 gap-4 items-center justify-between">
+                <img class="w-[8rem] h-[10rem] object-cover" :src="category.subCategories[0].image" :alt="category.subCategories[0].title">
+                <h3 class="text-center">{{ category.subCategories[0].title }}</h3>
               </NuxtLink>
             </div>
           </li>
@@ -28,13 +28,13 @@ const { data: categories } = await useFetch('/api/firstSubCategories');
 </script>
 
 <style scoped>
+
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 3rem;
-    align-items: baseline;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem;
+  align-items: stretch;
 }
 
 .grid-item {
