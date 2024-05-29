@@ -4,9 +4,10 @@
     <div class="flex justify-center">
     <ul class="grid-container pt-8 pb-20">
       <li v-for="sub in category.subCategories" :key="sub.id" class="grid-item rounded-3xl bg-[#BADBE7]">
-        <NuxtLink :to="`/${sub.slug}`" class="flex flex-col p-4 gap-4 items-center justify-between">
-          <img class="" :src="sub.image" :alt="sub.title">
+        <NuxtLink :to="`/${sub.slug}`" class="flex flex-col p-4 gap-4 items-center justify-between" @click="markAsViewed(sub.id)">
+          <img :src="sub.image" :alt="sub.title" />
           <h3>{{ sub.title }}</h3>
+          <div v-if="sub.viewed" class="viewed-badge">✔️</div>
         </NuxtLink>
       </li>
     </ul>
@@ -19,6 +20,16 @@ import { useFetch } from '#app';
 
 const route = useRoute();
 const { data: category } = await useFetch(`/api/category/${route.params.id}`);
+
+
+const markAsViewed = async (subCategoryId: any) => {
+  await $fetch('/api/markViewed', {
+    method: 'POST',
+    body: { subCategoryId }
+  })
+
+}
+
 </script>
 
 <style scoped>
@@ -44,4 +55,5 @@ const { data: category } = await useFetch(`/api/category/${route.params.id}`);
   list-style: none; 
   padding: 0;
 }
+
 </style>

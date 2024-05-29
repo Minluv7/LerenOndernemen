@@ -13,7 +13,6 @@
 
 <script setup lang="ts">
 
-
 // Fetch motivations data
 const motivations = ref<Motivation[]>([]);
 const fetchMotivations = async () => {

@@ -21,6 +21,7 @@ model Users {
   firstName String?
   lastName String?
   subCategories SubCategories[]
+  viewedLessens ViewedLessens[]
 }
 
 model Dashboard {
@@ -49,7 +50,16 @@ model Categories {
    category_id Int
    category Categories @relation(fields: [category_id], references: [id])
    types Types[]
+   viewedLessens ViewedLessens[]
  }
+
+ model ViewedLessens {
+  id              Int         @id @default(autoincrement())
+  user            Users       @relation(fields: [userId], references: [id])
+  userId          Int
+  subCategory     SubCategories @relation(fields: [subCategoryId], references: [id])
+  subCategoryId   Int
+}
 
  model Types{
     id Int @id @default(autoincrement())

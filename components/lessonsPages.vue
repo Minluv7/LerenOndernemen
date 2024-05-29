@@ -1,5 +1,6 @@
 <template>
     <div v-for="sub in subCategories" :key="sub.id">
+       
         <h2 cl>{{ sub.title }}</h2>
         <div class="flex bg-[#f1f9fa] p-4 mt-4 rounded-[2rem]" >
             <img  :src="sub.avatar" alt="avatar" class="avatar-img pr-2" />
@@ -89,9 +90,7 @@ onMounted(() => {
     };
 });
 
-
 </script>
-
 
 <style scoped>
 .avatar-img {

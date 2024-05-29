@@ -5,7 +5,7 @@
         <label 
           for="lastName"  
           class="block mb-2 text-sm font-medium text-gray-900"
-          >Naam</label
+          >Familienaam</label
           >
         <input
           v-model="form.firstName"
