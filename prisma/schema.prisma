@@ -20,8 +20,8 @@ model Users {
   password String 
   firstName String?
   lastName String?
-  subCategories SubCategories[]
   viewedLessens ViewedLessens[]
+  businessPlanValue BusinessPlanValue[]
 }
 
 model Dashboard {
@@ -45,8 +45,6 @@ model Categories {
    image String
    description String?
    avatar String?
-   user_id Int?
-   user Users? @relation(fields: [user_id], references: [id])
    category_id Int
    category Categories @relation(fields: [category_id], references: [id])
    types Types[]
@@ -60,6 +58,30 @@ model Categories {
   subCategory     SubCategories @relation(fields: [subCategoryId], references: [id])
   subCategoryId   Int
 }
+
+model BusinessPlan{
+  id Int @id @default(autoincrement())
+  title String
+  businessPlanQuetion BusinessPlanQuetion[]
+}
+
+model BusinessPlanQuetion{
+  id Int @id @default(autoincrement())
+  question String
+  businessPlanId Int
+  businessPlan BusinessPlan @relation(fields: [businessPlanId], references: [id])
+  businessPlanValue BusinessPlanValue[]
+}
+
+model BusinessPlanValue{
+  id Int @id @default(autoincrement())
+  value String
+  businessPlanQuetionId Int
+  businessPlanQuetion BusinessPlanQuetion @relation(fields: [businessPlanQuetionId], references: [id])
+  user_id Int
+  user Users @relation(fields: [user_id], references: [id])
+}
+
 
  model Types{
     id Int @id @default(autoincrement())
