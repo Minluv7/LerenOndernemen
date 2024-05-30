@@ -20,13 +20,11 @@
 const route = useRoute();
 const { data: category } = await useFetch(`/api/category/${route.params.id}`);
 
-
 const markAsViewed = async (subCategoryId: any) => {
   await $fetch('/api/markViewed', {
     method: 'POST',
     body: { subCategoryId }
   })
-
 }
 
 </script>

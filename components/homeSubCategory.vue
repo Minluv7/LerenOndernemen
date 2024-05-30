@@ -5,7 +5,7 @@
         <ul class="grid-container pt-8 pb-20">
           <li v-for="category in categories" :key="category.id" class="grid-item rounded-3xl bg-[#BADBE7]">
             <div  v-if="category.subCategories.length > 0">
-              <NuxtLink :to="`/${category.subCategories[0].slug}`" class="flex flex-col p-4 gap-4 items-center justify-between">
+              <NuxtLink :to="`/${category.subCategories[0].slug}`" class="flex flex-col p-4 gap-4 items-center justify-between" @click="markAsViewed(category.subCategories[0].id)">
                 <img class="w-[8rem] h-[10rem] object-cover" :src="category.subCategories[0].image" :alt="category.subCategories[0].title">
                 <h3 class="text-center">{{ category.subCategories[0].title }}</h3>
               </NuxtLink>
@@ -24,6 +24,14 @@ const { data } = useAuth();
 
 // Fetch subcategories
 const { data: categories } = await useFetch('/api/firstSubCategories');
+
+const markAsViewed = async (subCategoryId: any) => {
+  await $fetch('/api/markViewed', {
+    method: 'POST',
+    body: { subCategoryId }
+  })
+
+}
 
 </script>
 
