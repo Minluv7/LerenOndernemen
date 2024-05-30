@@ -16,7 +16,6 @@
 </template>
 
 <script setup lang="ts">
-import { useFetch } from '#app';
 
 const route = useRoute();
 const { data: category } = await useFetch(`/api/category/${route.params.id}`);

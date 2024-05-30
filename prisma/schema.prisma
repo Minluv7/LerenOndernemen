@@ -38,20 +38,20 @@ model Categories {
   subCategories SubCategories[]
 }
 
- model SubCategories {
-   id Int @id @default(autoincrement())
-   title String
-   slug String @unique
-   image String
-   description String?
-   avatar String?
-   category_id Int
-   category Categories @relation(fields: [category_id], references: [id])
-   types Types[]
-   viewedLessens ViewedLessens[]
- }
+model SubCategories {
+  id Int @id @default(autoincrement())
+  title String
+  slug String @unique
+  image String
+  description String?
+  avatar String?
+  category_id Int
+  category Categories @relation(fields: [category_id], references: [id])
+  types Types[]
+  viewedLessens ViewedLessens[]
+}
 
- model ViewedLessens {
+model ViewedLessens {
   id              Int         @id @default(autoincrement())
   user            Users       @relation(fields: [userId], references: [id])
   userId          Int
@@ -82,8 +82,7 @@ model BusinessPlanValue{
   user Users @relation(fields: [user_id], references: [id])
 }
 
-
- model Types{
+model Types{
     id Int @id @default(autoincrement())
     name String
     subCategoryId Int
