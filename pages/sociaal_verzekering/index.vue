@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="space"> 
   <lessonsPages />
     </div>
 </template>
@@ -11,5 +11,8 @@ definePageMeta({
 </script>
 
 <style scoped>
-
+.space{
+    max-width: 90%;
+    margin: 0 auto;
+}
 </style>

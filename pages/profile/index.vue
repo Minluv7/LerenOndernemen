@@ -1,5 +1,5 @@
 <template>
-    <div v-if="subCategories">
+    <div v-if="subCategories" class="space">
       <div>
         <h2>Lessens die ik al heb gevolgd</h2>
         <ul>
@@ -41,5 +41,8 @@ definePageMeta({
 
 
 <style scoped>
-
+.space{
+    max-width: 90%;
+    margin: 0 auto;
+}
 </style>

@@ -1,20 +1,23 @@
 <template>
   <div>
     <button class="w-20 border-none mb-8" @click="goBack"> Terug</button>
-    <h2>{{businessPlan.title}}</h2>
-    <form @submit.prevent="saveAllAnswers">
-      <div v-for="business in businessPlan.businessPlanQuetion" :key="business.id">
-        <p>{{business.question}}</p>
-        <div v-for="value in business.businessPlanValue" :key="value.id">
-          <input type="text" v-model="value.value" :readonly="!value.editable" />
-          <button @click="toggleEditable(value)">
+    <h2 class="pb-4">{{businessPlan.title}}</h2>
+    <form @submit.prevent="saveAllAnswers" class="pb-24">
+      <div v-for="business in businessPlan.businessPlanQuetion" :key="business.id" class="pb-8">
+        <label for="input-field">
+         {{business.question}}
+        </label>
+        <div v-for="value in business.businessPlanValue" :key="value.id" class="flex flex-col gap-4">
+           <button class="max-w-max place-self-end border-none" @click="toggleEditable(value)">
             <span v-if="value.editable">Opslaan</span>
             <span v-else>Wijzig</span>
           </button>
+          <!-- <input type="text" v-model="value.value" :readonly="!value.editable" class="w-full h-12 p-4" /> -->
+          <textarea type="text" v-model="value.value" :readonly="!value.editable" cols="20" rows="5" class=" p-4"></textarea>
         </div>
-        <div v-if="business.businessPlanValue.length === 0">
-          <input type="text" v-model="business.answerValue" placeholder="Enter your answer" />
-         
+        <div  v-if="business.businessPlanValue.length === 0" class="flex flex-col gap-4 pt-4">
+          <!-- <input type="text" v-model="business.answerValue" placeholder="Enter your answer" /> -->
+           <textarea type="text" v-model="business.answerValue" cols="full" rows="5" class=" p-4" placeholder="Schrijf je antwoord"></textarea>
         </div>
       </div>
       <button type="submit">Save All</button>
@@ -99,4 +102,5 @@ const goBack = () => {
 </script>
 
 <style scoped>
+
 </style>
