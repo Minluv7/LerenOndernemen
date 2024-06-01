@@ -1,6 +1,5 @@
 <template>
   <div>
-    <button @click="downloadAllAsPDF">Download Alle Plannen als PDF</button>
     <ul class="flex gap-4 flex-col">
       <NuxtLink
         v-for="business in businessPlan"
@@ -15,7 +14,7 @@
     </ul>
    
      <button @click="downloadAllAsPDF">
-      Download alle detailpagina's als PDF
+      Download businessplan als PDF
     </button>
   </div>
 </template>
