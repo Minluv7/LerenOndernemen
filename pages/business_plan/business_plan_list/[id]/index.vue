@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div >
     <button class="w-20 border-none mb-8" @click="goBack"> Terug</button>
     <h2 class="pb-4">{{businessPlan.title}}</h2>
-    <form @submit.prevent="saveAllAnswers" class="pb-24">
+    <form @submit.prevent="saveAllAnswers" class="pb-24" >
       <div v-for="business in businessPlan.businessPlanQuetion" :key="business.id" class="pb-8">
         <label for="input-field">
          {{business.question}}
@@ -30,6 +30,7 @@ import { ref } from 'vue';
 const route = useRoute();
 const router = useRouter();
 const { data: businessPlan } = await useFetch(`/api/businessPlan/${route.params.id}`);
+
 
 const saveAllAnswers = async () => {
 for (let business of (businessPlan as any).value.businessPlanQuetion) {

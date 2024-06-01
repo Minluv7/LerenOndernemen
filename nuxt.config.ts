@@ -1,13 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default ({
   devtools: { enabled: true },
-
+  
   runtimeConfig: {
     authSecret: process.env.AUTH_SECRET,
     databaseUrl: process.env.DATABASE_URL, 
   },
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/cloudinary', "@sidebase/nuxt-auth"],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/cloudinary', "@sidebase/nuxt-auth", '@sidebase/nuxt-pdf'],
   auth: {
     baseUrl: process.env.AUTH_ORIGIN,
     provider: {

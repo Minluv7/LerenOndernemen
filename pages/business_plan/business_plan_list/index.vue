@@ -1,7 +1,7 @@
 <template>
-  <div class="mb-20">
-   
-    <ul class="flex gap-4 flex-col pb-6">
+  <div>
+    <button @click="downloadAllAsPDF">Download Alle Plannen als PDF</button>
+    <ul class="flex gap-4 flex-col">
       <NuxtLink
         v-for="business in businessPlan"
         :key="business.id"
@@ -13,40 +13,37 @@
         </li>
       </NuxtLink>
     </ul>
-     <button @click="downloadAllAsPDF">Download als PDF</button>
+   
+     <button @click="downloadAllAsPDF">
+      Download alle detailpagina's als PDF
+    </button>
   </div>
 </template>
 
 <script setup>
 
-let html2pdf;
+let htmlToPdf
 
 onMounted(async () => {
-  if (process.client) {
-    // Dynamisch importeren van html2pdf.js op de client-side
-    html2pdf = await import('html2pdf.js');
-  }
-});
+  htmlToPdf = (await import('html2pdf.js')).default
+})
 
 const { data: businessPlan } = await useFetch('/api/businessPlan');
 
-const downloadAllAsPDF = async () => {
-// Fetch all business plans
-  const allBusinessPlans = await Promise.all(
-    businessPlan.value.map(async (business) => {
-      const response = await fetch(`/api/businessPlan/${business.id}`);
-      //parse het antwoord als JSON en geef het terug
-      return response.json();
-    })
-  );
-// Maak een div element aan voor de PDF content
-  const element = document.createElement('div');
-  allBusinessPlans.forEach(plan => {
-    // Maak een div element aan voor elk business plan
-    const planDiv = document.createElement('div');
-    // vul de div met de HTML content van het business plan
-    planDiv.innerHTML = `
 
+const downloadAllAsPDF = async () => {
+  // Array om de HTML-inhoud van elk bedrijfsplan op te slaan
+  const businessPlanHTML = [];
+
+  // Loop door elk bedrijfsplan en haal de HTML-inhoud op
+  for (const business of businessPlan.value) {
+    const response = await fetch(`/api/businessPlan/${business.id}`);
+    const plan = await response.json();
+
+    // Maak een div element aan voor het bedrijfsplan
+    const planDiv = document.createElement('div');
+    planDiv.innerHTML = `
+    <div style="padding: 1rem;">
       <h2>${plan.title}</h2>
       ${plan.businessPlanQuetion.map(question => `
         <div>
@@ -56,20 +53,25 @@ const downloadAllAsPDF = async () => {
           `).join('')}
           ${!question.businessPlanValue.length ? `<p>${question.answerValue}</p>` : ''}
         </div>
+  
       `).join('')}
+        </div>
     `;
-    element.appendChild(planDiv);
-  });
 
-  const opt = {
-    margin:       0.5,
-    filename:     'Business_Plans.pdf',
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 2 },
-    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-  };
-  html2pdf().from(element).set(opt).save();
+    // Voeg de HTML-inhoud van het bedrijfsplan toe aan de array
+    businessPlanHTML.push(planDiv.innerHTML);
+  }
+
+  // Combineer alle HTML-inhoud met een scheidingsteken
+  const combinedHTML = businessPlanHTML.join('<hr>');
+
+  // Converteer de gecombineerde HTML-inhoud naar een PDF-bestand
+  const pdf = await htmlToPdf(combinedHTML);
+
+  // Download het PDF-bestand
+  pdf.download('Business_Plans.pdf');
 };
+
 
 definePageMeta({
   middleware: 'auth',
