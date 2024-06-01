@@ -20,7 +20,7 @@
            <textarea type="text" v-model="business.answerValue" cols="full" rows="5" class=" p-4" placeholder="Schrijf je antwoord"></textarea>
         </div>
       </div>
-      <button type="submit">Save All</button>
+      <button type="submit">Opslaan</button>
     </form>
   </div>
 </template>
