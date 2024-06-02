@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <ul class="flex gap-4 flex-col">
+  <div class="pb-20">
+    <ul class="flex gap-4 flex-col pb-4">
       <NuxtLink
         v-for="business in businessPlan"
         :key="business.id"
@@ -64,11 +64,12 @@ const downloadAllAsPDF = async () => {
   // Combineer alle HTML-inhoud met een scheidingsteken
   const combinedHTML = businessPlanHTML.join('<hr>');
 
-  // Converteer de gecombineerde HTML-inhoud naar een PDF-bestand
-  const pdf = await htmlToPdf(combinedHTML);
+   const worker = htmlToPdf().from(combinedHTML).save('Business_Plans.pdf');
 
-  // Download het PDF-bestand
-  pdf.download('Business_Plans.pdf');
+   worker.save('Business_Plans.pdf')
+  .then(() => console.log('PDF generation finished'))
+  .catch((error) => console.error('Error during PDF generation', error))
+
 };
 
 

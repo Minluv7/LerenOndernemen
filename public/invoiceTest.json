@@ -1,0 +1,282 @@
+{
+    "invoiceTest":[
+        {
+            "id": 1,
+            "question": "Welke is geen btw percentage in België?",
+            "answers": [
+                {
+                    "answer": "21%",
+                    "correct": false
+                },
+                {
+                    "answer": "6%",
+                    "correct": false
+                },
+                {
+                    "answer": "12%",
+                    "correct": false
+                },
+                {
+                    "answer": "0%",
+                    "correct": false
+                },
+                {
+                    "answer": "15%",
+                    "correct": true
+                }
+            ],
+            "id": 2,
+            "question": "Wat is de formule voor het berekenen van de btw als het belastingstarief 21% is?",
+            "answers": [
+                {
+                    "answer": "Prijs * 0.21",
+                    "correct": false
+                },
+                {
+                    "answer": "Prijs * 21",
+                    "correct": false
+                },
+                {
+                    "answer": "Prijs * 21 / 100",
+                    "correct": true
+                }
+            ],
+            "id": 3,
+            "question": "Wat is de formule voor het berekenen van de prijs zonder btw?",
+            "answers": [
+                {
+                    "answer": "Prijs / 0,21",
+                    "correct": false
+                },
+                {
+                    "answer": "Prijs / 21",
+                    "correct": false
+                },
+                {
+                    "answer": "Prijs / 1.21",
+                    "correct": true
+                }
+            ],
+            "id": 4,
+            "question": "Hoe bereken je de totale kosten op een factuur als er een korting van 10% wordt toegepast op een totaalbedrag van €100?",
+            "answers": [
+                {
+                    "answer": "100 / 10",
+                    "correct": false
+                },
+                {
+                    "answer": "100 - (100 * 0.10)",
+                    "correct": true
+                },
+                {
+                    "answer": "100 * 10 / 100",
+                    "correct": false
+                }
+            ],
+            "id": 5,
+            "question": "Welke van de volgende elementen is essentieel op een factuur?",
+            "answers": [
+                {
+                    "answer": "Handtekening van de klant",
+                    "correct": false
+                },
+                {
+                    "answer": "Opdrichtingsdatum van het bedrijf",
+                    "correct": false
+                },
+                {
+                    "answer": "Factuurnummer",
+                    "correct": true
+                }
+            ],
+            "id": 6,
+            "question": "Als er een fout wordt gevonden op een factuur, welk document wordt meestal uitgegeven om dit te corrigeren?",
+            "answers": [
+                {
+                    "answer": "Creditnota",
+                    "correct": true
+                },
+                {
+                    "answer": "betalingsherinnering",
+                    "correct": false
+                },
+                {
+                    "answer": "Factuur",
+                    "correct": false
+                }
+            ],
+            "id": 7,
+            "question": "Wat is de functie van het factuurnummer?",
+            "answers": [
+                {
+                    "answer": " Het specificeert de belastingtarieven",                    
+                    "correct": false
+                },
+                {
+                    "answer": "Het vermeldt de verzendkosten",
+                    "correct": true
+                },
+                {
+                    "answer": "Het identificeert de factuur",
+                    "correct": true
+                },
+                {
+                    "answer": "Het geeft het totale verschuldigde bedrag aan",
+                    "correct": false
+                }
+            ],
+            "id": 8,
+            "question": "Welke van de volgende is NIET typisch een onderdeel van de betalingsvoorwaarden?",
+            "answers": [
+                {
+                    "answer": "De betalingstermijn",
+                    "correct": false
+                },
+                {
+                    "answer": " Boetes voor late betalingen",
+                    "correct": false
+                },
+                {
+                    "answer": "Het adres van de leverancier",
+                    "correct": true
+                },
+                {
+                    "answer": "De betalingskorting",
+                    "correct": false
+                }
+            ],
+            "id": 9,
+            "question": "Wat is het verschil tussen een factuur en een creditnota?",
+            "answers": [
+                {
+                    "answer": "Een factuur is een verzoek om betaling, terwijl een creditnota een verzoek om terugbetaling is",
+                    "correct": true
+                },
+                {
+                    "answer": "Een factuur is een verzoek om betaling, terwijl een creditnota een verzoek om belasting te betalen is",
+                    "correct": false
+                },
+                {
+                    "answer": "Een factuur is een verzoek om terugbetaling, terwijl een creditnota een verzoek om betaling is",
+                    "correct": false
+                }
+            ],
+            "id": 10,
+            "question": "Wat zijn Intracommunautaire Transacties?",
+            "answers": [
+                {
+                    "answer": "Transacties tussen bedrijven binnen dezelfde gemeente",
+                    "correct": false
+                },
+                {
+                    "answer": "Transacties tussen bedrijven binnen dezelfde land",
+                    "correct": false
+                },
+                {
+                    "answer": "Transacties tussen bedrijven binnen de Europese Unie",
+                    "correct": true
+                }
+            ],
+            "id": 11,
+            "question": "Wat gebeurt er met de BTW bij intracommunautaire transacties?",
+            "answers": [
+                {
+                    "answer": "De verkoper betaalt de BTW in het land van de koper",
+                    "correct": false
+                },
+                {
+                    "answer": "De koper betaalt de BTW in zijn eigen land BTW verlegd",
+                    "correct": true
+                },
+                {
+                    "answer": "De verkoper betaalt geen BTW, en de koper hoeft ook geen BTW te betalen",
+                    "correct": false
+                },
+                {
+                    "answer": "De BTW wordt verlegd naar de belastingdienst van het land van de verkoper",
+                    "correct": false
+                }
+            ],
+            "id": 12,
+            "question": "Hoe noem je de transactie van betalingen van landen buiten de EU?",
+            "answers": [
+                {
+                    "answer": "Intracommunautaire transactie",
+                    "correct": false
+                },
+                {
+                    "answer": "Extracommunautaire transactie",
+                    "correct": true
+                },
+                {
+                    "answer": "Extracontinentale transactie",
+                    "correct": false
+                },
+                {
+                    "answer": "Internationale transactie",
+                    "correct": false
+                }
+            ],
+            "id": 13,
+            "question": "Hoe wordt BTW behandeld bij de invoer van goederen uit een niet-EU-land naar een EU-lidstaat?",
+            "answers": [
+                {
+                    "answer": "De BTW wordt geheven door het land van de verkoper",
+                    "correct": false
+                },
+                {
+                    "answer": "De BTW wordt geheven door het land van de koper bij invoer",
+                    "correct": true
+                },
+                {
+                    "answer": "Er wordt geen BTW geheven",
+                    "correct": false
+                },
+                {
+                    "answer": "De BTW wordt verlegd naar de belastingdienst van de EU",
+                    "correct": false
+                }
+            ],
+            "id": 14,
+            "question": "Wat betekent maatstaf van heffing (MVH)?",
+            "answers": [
+                {
+                    "answer": "Het bedrag waar op nog de BTW wordt berekend",
+                    "correct": true
+                },
+                {
+                    "answer": "Het bedrag dat de klant moet betalen",
+                    "correct": false
+                },
+                {
+                    "answer": "Het bedrag dat de verkoper moet betalen",
+                    "correct": false
+                },
+                {
+                    "answer": "Het bedrag dat de belastingdienst moet betalen",
+                    "correct": false
+                }
+            ],
+            "id": 15,
+            "question": "Hoe zit het met de BTW-regeling voor verkoop bij intracommunautaire leveringen of export naar niet-EU-landen?",
+            "answers": [
+                {
+                "answer": "0% BTW",
+                "correct": true
+                },
+                {
+                    "answer": "21% BTW",
+                    "correct": false
+                },
+                {
+                    "answer": "6% BTW",
+                    "correct": false
+                },
+                {
+                    "answer": "12% BTW",
+                    "correct": false
+                }
+            ]
+        }
+    ]
+}
