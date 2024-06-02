@@ -3,24 +3,23 @@
         <button class="w-20 border-none mb-8" @click="goBack"> Terug</button>
     <div v-if="currentQuestionIndex < invoiceTest.length">
       <div>
-      <div class="flex justify-between">
- <h2>{{ currentQuestion.question }}</h2>
-           <p>{{ currentQuestionIndex + 1 }} / {{ invoiceTest.length }}</p>
+      <div>
+        <p>{{ currentQuestionIndex + 1 }} / {{ invoiceTest.length }}</p>
+        <h2>{{ currentQuestion.question }}</h2>
       </div>
-       
-        <div v-for="answer in currentQuestion.answers" :key="answer.id">
-          <button @click="selectAnswer(answer)">{{ answer.answer }}</button>
+        <div  class="flex gap-4 mt-4 flex-wrap">
+          <button v-for="answer in currentQuestion.answers" :key="answer.id" class="underline border-none max-w-max " @click="selectAnswer(answer)">{{ answer.answer }}</button>
         </div>
       </div>
     </div>
-     <div v-else>
+     <div v-else class="mb-40">
       <h2>Quiz voltooid!</h2>
       <p>Je hebt {{ correctAnswers }} van de {{ invoiceTest.length }} vragen correct beantwoord.</p>
       <div v-for="(question, index) in invoiceTest" :key="index">
         <p>Vraag {{ index + 1 }}: {{ question.question }}</p>
         <p>Je antwoord: <span :style="{ color: question.selectedAnswer.correct ? 'green' : 'red' }">{{ question.selectedAnswer.answer }}</span></p>
       </div>
-      <button @click="resetQuiz">Opnieuw beginnen</button>
+      <button class="mt-4" @click="resetQuiz">Opnieuw beginnen</button>
     </div>
   </div>
 </template>

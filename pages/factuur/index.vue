@@ -4,7 +4,7 @@
         <NuxtLink class="flex justify-center pt-8"  :to="'/factuur/factuur_leren_opmaken'">
         <button class="max-w-fit border-none">Factuur leren opmaken</button>
         </NuxtLink>
-         <NuxtLink class="flex justify-center pt-8"  :to="'/factuur/factuur_testen'">
+        <NuxtLink class="flex justify-center pt-8"  :to="'/factuur/factuur_testen'">
         <button class="max-w-fit border-none">Factuur kennis testen</button>
         </NuxtLink>
         <a :href="excelFilePath" download="factuur_sjabloon.xlsx" class="flex gap-2 justify-center pt-8">

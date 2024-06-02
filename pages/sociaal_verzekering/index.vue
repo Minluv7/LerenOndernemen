@@ -1,5 +1,5 @@
 <template>
-    <div class="space"> 
+    <div class="space pb-32"> 
   <lessonsPages />
     </div>
 </template>

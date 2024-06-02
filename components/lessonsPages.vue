@@ -3,11 +3,11 @@
        
         <h2 cl>{{ sub.title }}</h2>
         <div class="flex bg-[#f1f9fa] p-4 mt-4 rounded-[2rem]" >
-            <img  :src="sub.avatar" alt="avatar" class="avatar-img pr-2" />
-            <div>
+            <img :src="sub.avatar" alt="avatar" class="avatar-img pr-2" />
+            <div class="text-area">
                 <p>{{ splitDescription(sub.description).firstLine }}</p>
                 <p class="pt-4">{{splitDescription(sub.description).remainingText}}</p>
-                <div class="flex max-w-[18rem] gap-4 pt-4">
+                <div class=" flex flex-wrap gap-4 pt-4">
                     <button @click="speak(sub.description)" class="speak-button border-none">▶️ Afspelen</button>
                     <button @click="pauseOrResume()" class="pause-button border-none"> {{ isPaused ? '🔊 Verder' : '⏸ Pauze' }}</button>
                 </div>
@@ -93,10 +93,25 @@ onMounted(() => {
 </script>
 
 <style scoped>
+
 .avatar-img {
-    width: 12rem; 
-    height: 25rem; 
+    width: 50%; 
+    height: 50%; 
     object-fit: cover;
+}
+
+.text-area {
+    width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    .avatar-img {
+       width: 8rem; 
+     object-fit: cover;
+    }
+    .text-area {
+    width: 80%;
+}
 }
 
 </style>
