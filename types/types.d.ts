@@ -21,3 +21,18 @@ interface Motivation {
     id: number;
     answer: string;
   }
+
+  interface InvoiceTest {
+    [x: string]: AnswerTest;
+    selectedAnswer: AnswerTest;
+    selectedAnswer: AnswerTest;
+    id: number;
+    title: string;
+    questions: string;
+    answers: AnswerTest[];
+  }
+
+  interface AnswerTest {
+    answer: string;
+    correct: boolean;
+  }
