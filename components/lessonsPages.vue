@@ -1,15 +1,14 @@
 <template>
     <div v-for="sub in subCategories" :key="sub.id">
-       
+        <button class="w-20 border-none mb-8" @click="goBack"> Terug</button>
         <h2 cl>{{ sub.title }}</h2>
         <div class="flex bg-[#f1f9fa] p-4 mt-4 rounded-[2rem]" >
             <img :src="sub.avatar" alt="avatar" class="avatar-img pr-2" />
             <div class="text-area">
                 <p>{{ splitDescription(sub.description).firstLine }}</p>
                 <p class="pt-4">{{splitDescription(sub.description).remainingText}}</p>
-                <div class=" flex flex-wrap gap-4 pt-4">
-                    <button @click="speak(sub.description)" class="speak-button border-none">▶️ Afspelen</button>
-                    <button @click="pauseOrResume()" class="pause-button border-none"> {{ isPaused ? '🔊 Verder' : '⏸ Pauze' }}</button>
+                <div class=" flex flex-wrap gap-4 pt-4 ">
+                    <button @click="toggleSpeak(sub.description)" class="speak-button border-none max-w-fit">{{ isSpeaking ? 'Stoppen' : '▶️ Afspelen' }}</button>
                 </div>
             </div>
         </div>
@@ -44,7 +43,7 @@ declare var SpeechSynthesisUtterance: any;
 declare var speechSynthesis: any;
 
 let currentUtterance: any = null;
-const isPaused = ref(false); // Gebruik ref om de waarde reactief te maken
+const isSpeaking = ref(false);
 
 const speak = (text: string) => {
     stopSpeaking(); // Stop eerst als er al spraak is
@@ -58,29 +57,27 @@ const speak = (text: string) => {
 
     currentUtterance = utterance;
     speechSynthesis.speak(utterance);
-    isPaused.value = false; // Reset pauze-status bij het starten van nieuwe spraak
+  
+    isSpeaking.value = true;
 };
 
-const pauseOrResume = () => {
-    if (!currentUtterance) return;
-
-    if (speechSynthesis.paused) {
-        speechSynthesis.resume();
-        isPaused.value = false;
-    } else {
-        speechSynthesis.pause();
-        isPaused.value = true;
-    }
-    console.log('Paused:', isPaused.value); // Voeg deze regel toe voor debugging
-};
 
 const stopSpeaking = () => {
     if (currentUtterance) {
         speechSynthesis.cancel();
         currentUtterance = null;
-        isPaused.value = false; // Reset pauze-status
+        isSpeaking.value = false;
     }
 };
+
+const toggleSpeak = (text: string) => {
+    if (isSpeaking.value) {
+        stopSpeaking();
+    } else {
+        speak(text);
+    }
+};
+
 
 onMounted(() => {
     // Load voices asynchronously
@@ -89,6 +86,12 @@ onMounted(() => {
         console.log('Available voices:', voices);
     };
 });
+
+const router = useRouter()
+
+const goBack = () => {
+    router.back()
+}
 
 </script>
 
@@ -106,8 +109,8 @@ onMounted(() => {
 
 @media screen and (min-width: 768px) {
     .avatar-img {
-       width: 8rem; 
-     object-fit: cover;
+        width: 8rem; 
+        object-fit: cover;
     }
     .text-area {
     width: 80%;

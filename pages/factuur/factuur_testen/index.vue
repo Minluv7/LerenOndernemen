@@ -14,12 +14,12 @@
     </div>
      <div v-else class="mb-40">
       <h2>Quiz voltooid!</h2>
-      <p>Je hebt {{ correctAnswers }} van de {{ invoiceTest.length }} vragen correct beantwoord.</p>
+      <h3 class="font-bold">Je hebt {{ correctAnswers }} van de {{ invoiceTest.length }} vragen correct beantwoord.</h3>
       <div v-for="(question, index) in invoiceTest" :key="index">
-        <p>Vraag {{ index + 1 }}: {{ question.question }}</p>
+        <p class="font-bold pt-4">Vraag {{ index + 1 }}: {{ question.question }}</p>
         <p>Je antwoord: <span :style="{ color: question.selectedAnswer.correct ? 'green' : 'red' }">{{ question.selectedAnswer.answer }}</span></p>
       </div>
-      <button class="mt-4" @click="resetQuiz">Opnieuw beginnen</button>
+      <button class="mt-4 max-w-fit" @click="resetQuiz">Opnieuw beginnen</button>
     </div>
   </div>
 </template>
@@ -53,7 +53,6 @@ const currentQuestion = computed(() => {
 
 const selectAnswer = (answer: AnswerTest) => {
 if (currentQuestion.value) {
-   
     currentQuestion.value.selectedAnswer = answer;
 }
   if (answer.correct) {

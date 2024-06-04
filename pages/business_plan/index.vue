@@ -1,7 +1,7 @@
 <template>
     <div  class="space">
         <lessonsPages />
-        <NuxtLink class="flex justify-center pt-8" :to="'/business_plan/business_plan_list'">
+        <NuxtLink class="flex justify-center pt-8 pb-24" :to="'/business_plan/business_plan_list'">
         <button class="max-w-fit border-none ">Businessplan leren opmaken</button></NuxtLink>
     </div>
 </template>
