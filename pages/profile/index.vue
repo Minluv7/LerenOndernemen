@@ -1,19 +1,18 @@
 <template>
-  <div v-if="subCategories" class="space mb-20">
+  <div v-if="subCategories" class="space">
     <div >
       <h1>Profiel</h1>
-      <form @submit.prevent="updateProfile"   >
+      <form v-if="getUser" @submit.prevent="updateProfile"   >
         <div class="flex flex-col pt-4">
- <label for="email">Email</label>
+        <label for="email">Email</label>
         <input type="email" id="email" name="email" placeholder="Email" v-model="getUser.email">
         </div>
-       <div class="flex flex-col pt-4">
-
+      <div class="flex flex-col pt-4">
         <label for="gebruikersnaam">Gebruikersnaam</label>
         <input type="text" id="gebruikersnaam" name="gebruikersnaam" placeholder="Gebruikersnaam" v-model="getUser.userName">
        </div>
        <div class="flex flex-col pt-4">
- <label for="firstName">Naam</label>
+        <label for="firstName">Naam</label>
         <input type="text" id="firstName" name="firstName" placeholder="Naam" v-model="getUser.firstName">
        </div>
        <div class="flex flex-col pt-4">
@@ -32,10 +31,10 @@
           </NuxtLink>
         </li>
       </ul>
-        <p class="pt-4">Je hebt al {{ subCategories.length }} lessen gevolgd</p>
+        <p  class="pt-4">Je hebt al {{ subCategories.length }} lessen gevolgd</p>
     </div>
     <logout-button class="pt-4"/>
-    <p class="underline text-center pt-4">Account verwijderen</p>
+    <button @click="confirmDeleteAccount" class="underline text-center pt-8 border-none bg-transparent text-[#013a63]">Account verwijderen</button>
   </div>
 </template>
 
@@ -94,12 +93,50 @@ const updateProfile = async () => {
   }
 };
 
+const confirmDeleteAccount = () => {
+  // @ts-expect-error
+  if (confirm('Weet je zeker dat je je account wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.')) {
+    deleteAccount();
+  }
+};
+
+
+const {data, signOut} = useAuth();
+const router = useRouter();
+
+const deleteAccount = async () => {
+  try {
+    const response = await fetch(`/api/userDelete`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Server fout: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log('Account verwijderd:', result);
+
+      await signOut();
+
+  } catch (error) {
+    console.error('Er is een fout opgetreden bij het verwijderen van het account:', error);
+  }
+};
+
+definePageMeta({
+  middleware: 'auth',
+})
 </script>
 
 <style scoped>
 .space {
   max-width: 90%;
   margin: 0 auto;
+  margin-bottom: 8rem;
 }
 input{
     padding: 0.5rem;
