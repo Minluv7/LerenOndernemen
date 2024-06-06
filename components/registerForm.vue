@@ -5,15 +5,15 @@
         <label 
           for="lastName"  
           class="block mb-2 text-sm font-medium text-gray-900"
-          >Familienaam</label
+          >Voornaam</label
           >
         <input
           v-model="form.firstName"
           type="text"
-          name="name"
-          id="name"
+          name="voornaam"
+          id="voornaam"
           class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
-          placeholder="naam"
+          placeholder="Voornaam"
           required=""
         />
       </div>
@@ -21,15 +21,15 @@
         <label
           for="firstName"
           class="block mb-2 text-sm font-medium text-gray-900"
-          >Voornaam</label
+          >Familienaam</label
         >
         <input
           v-model="form.lastName"
           type="text"
-          name="voorname"
-          id="voorname"
+          name="achternaam"
+          id="name"
           class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
-          placeholder="Voornaam"
+          placeholder="Achternaam"
           required=""
         />
       </div>

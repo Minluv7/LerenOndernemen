@@ -9,7 +9,6 @@ export default defineEventHandler(async (event) => {
 
     if (!id || !value) {
         throw createError({ statusCode:400, statusMessage: 'Missing id or value' });
-     
     }
 
     const updatedValue = await prisma.businessPlanValue.update({

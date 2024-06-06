@@ -1,5 +1,6 @@
 <template>
   <div class="pb-20">
+      <button class="w-20 border-none mb-8" @click="goBack"> Terug</button>
     <ul class="flex gap-4 flex-col pb-4">
       <NuxtLink
         v-for="business in businessPlan"
@@ -12,7 +13,6 @@
         </li>
       </NuxtLink>
     </ul>
-   
      <button @click="downloadAllAsPDF">
       Download businessplan als PDF
     </button>
@@ -20,6 +20,8 @@
 </template>
 
 <script setup>
+
+
 
 let htmlToPdf
 
@@ -72,6 +74,11 @@ const downloadAllAsPDF = async () => {
 
 };
 
+const router = useRouter();
+
+const goBack = () => {
+    router.back();
+};
 
 definePageMeta({
   middleware: 'auth',

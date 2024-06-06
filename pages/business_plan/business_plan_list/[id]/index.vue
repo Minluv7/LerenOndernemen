@@ -5,15 +5,16 @@
     <form @submit.prevent="saveAllAnswers" class="pb-24">
       <div v-for="business in businessPlan.businessPlanQuetion" :key="business.id" class="pb-8">
         <label for="input-field">
-         {{business.question}}
+         {{business.question}} <span style="color: red">*</span>
         </label>
         <div v-for="value in business.businessPlanValue" :key="value.id" class="flex flex-col gap-4">
           <textarea 
             v-model="value.value" 
-            @input="updateValue(value.businessPlanQuestionId, value.id, value.value)"
             cols="20" 
             rows="5" 
-            class="p-4">
+            class="p-4"
+            required>
+           
           </textarea>
         </div>
         <div v-if="business.businessPlanValue.length === 0" class="flex flex-col gap-4 pt-4">
