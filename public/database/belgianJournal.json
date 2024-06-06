@@ -1,0 +1,148 @@
+{
+    "belgianJournal": [
+        {
+            "id": 1,
+            "question": "Wat is het Belgisch Staatsblad?",
+            "answers": [
+                {
+                    "answer": "Een officiële publicatie waarin wetten, koninklijke besluiten en andere officiële mededelingen worden gepubliceerd.",
+                    "correct": true
+                },
+                {
+                    "answer": "Een populaire krant die dagelijks nieuws verspreidt.",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "question": "Wie is verantwoordelijk voor de uitgave van het Belgisch Staatsblad?",
+            "answers": [
+                {
+                    "answer": "De Federale Overheidsdienst Justitie.",
+                    "correct": true
+                },
+                {
+                    "answer": "De Nationale Bank van België.",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "question": "Hoe wordt je als bedrijf gepubliceerd in het Belgische Staatsblad?",
+            "answers": [
+                {
+                    "answer": "Door de oprichtingsakte en statuten van het bedrijf te laten neerleggen bij de griffie van de ondernemingsrechtbank, die vervolgens de gegevens doorstuurt naar het Belgisch Staatsblad.",
+                    "correct": true
+                },
+                {
+                    "answer": "Door een aanvraag in te dienen bij de Nationale Bank van België, die de publicatie vervolgens verzorgt.",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "question": "In welke talen wordt het Belgisch Staatsblad gepubliceerd?",
+            "answers": [
+                {
+                    "answer": "Nederlands en Frans",
+                    "correct": false
+                },
+                {
+                    "answer": "Nederlands, Frans en Duits.",
+                    "correct": true
+                },
+                {
+                    "answer": "Nederlands en Engels.",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "question": "Waar kan men het Belgisch Staatsblad raadplegen?",
+            "answers": [
+                {
+                    "answer": "Op de officiële website van het Belgisch Staatsblad.",
+                    "correct": true
+                },
+                {
+                    "answer": "Alleen in fysieke bibliotheken in Brussel.",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "question": "Welke documenten moeten worden ingediend bij de griffie van de ondernemingsrechtbank voor publicatie in het Belgisch Staatsblad?",
+            "answers": [
+                {
+                    "answer": "Jaarrekening en belastingaangifte.",
+                    "correct": false
+                },
+                {
+                    "answer": "Oprichtingsakte, statuten en een uittreksel van de oprichtingsakte.",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "question": "Waarom is publicatie in het Belgisch Staatsblad noodzakelijk voor een bedrijf?",
+            "answers": [
+                {
+                    "answer": "Het zorgt voor officiële erkenning en registratie van het bedrijf.",
+                    "correct": true
+                },
+                {
+                    "answer": "Het maakt het bedrijf vrijgesteld van belastingen.",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "question": "Welke informatie wordt gepubliceerd in het Belgisch Staatsblad bij de oprichting van een bedrijf?",
+            "answers": [
+                {
+                    "answer": "De naam, zetel, doel van de onderneming, namen van bestuurders en het maatschappelijk kapitaal.",
+                    "correct": true
+                },
+                {
+                    "answer": "De privé-adressen van alle werknemers.",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "question": "Wat gebeurt er als een bedrijf wijzigingen wil aanbrengen in de statuten na de oprichting?",
+            "answers": [
+                {
+                    "answer": "De wijzigingen moeten opnieuw worden ingediend bij de griffie van de ondernemingsrechtbank en gepubliceerd in het Belgisch Staatsblad.",
+                    "correct": true
+                },
+                {
+                    "answer": "De wijzigingen hoeven alleen intern gedocumenteerd te worden en hoeven niet opnieuw gepubliceerd te worden.",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "question": "Moet elke bedrijfsvorm een publicatie doen bij het Belgisch Staatsblad?",
+            "answers": [
+                {
+                    "answer": "Ja, elke vennootschap moet worden gepubliceerd in het Belgisch Staatsblad, ongeacht de bedrijfsvorm.",
+                    "correct": false
+                },
+                {
+                    "answer": "Nee, alleen vennootschappen zoals NV, BV, en VOF moeten worden gepubliceerd in het Belgisch Staatsblad. Eenmanszaken hoeven dit niet te doen.",
+                    "correct": true
+                }
+            ]
+        }
+    ]
+}

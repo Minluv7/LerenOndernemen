@@ -9,15 +9,15 @@
         </div>
       <div class="flex flex-col pt-4">
         <label for="gebruikersnaam">Gebruikersnaam</label>
-        <input type="text" id="gebruikersnaam" name="gebruikersnaam" placeholder="Gebruikersnaam" v-model="getUser.userName">
+        <input v-if="getUser" type="text" id="gebruikersnaam" name="gebruikersnaam" placeholder="Gebruikersnaam" v-model="getUser.userName">
        </div>
        <div class="flex flex-col pt-4">
         <label for="firstName">Naam</label>
-        <input type="text" id="firstName" name="firstName" placeholder="Naam" v-model="getUser.firstName">
+        <input v-if="getUser" type="text" id="firstName" name="firstName" placeholder="Naam" v-model="getUser.firstName">
        </div>
        <div class="flex flex-col pt-4">
         <label for="lastName">Achternaam</label>
-        <input type="text" id="lastName" name="lastName" placeholder="Achternaam" v-model="getUser.lastName">
+        <input v-if="getUser" type="text" id="lastName" name="lastName" placeholder="Achternaam" v-model="getUser.lastName">
        </div>
   
         <button class="border-none max-w-fit mt-4" type="submit">Opslaan</button>
@@ -39,7 +39,6 @@
 </template>
 
 <script setup lang="ts">
-
 
 const {data: getUser} = useFetch('/api/userData');
 const { data: fetchedSubCategories, error } = useFetch('/api/viewedLesson');
@@ -139,9 +138,9 @@ definePageMeta({
   margin-bottom: 8rem;
 }
 input{
-    padding: 0.5rem;
-    border-radius: 1rem;
-    width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  width: 100%;
 
 }
 </style>

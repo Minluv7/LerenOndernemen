@@ -1,10 +1,10 @@
 <template>
-  <div v-if="invoiceTest">
+  <div v-if="belgianJournal">
         <button class="w-20 border-none mb-8" @click="goBack"> Terug</button>
-    <div v-if="currentQuestionIndex < invoiceTest.length">
+    <div v-if="currentQuestionIndex < belgianJournal.length">
       <div>
       <div>
-        <p>{{ currentQuestionIndex + 1 }} / {{ invoiceTest.length }}</p>
+        <p>{{ currentQuestionIndex + 1 }} / {{ belgianJournal.length }}</p>
         <h2>{{ currentQuestion.question }}</h2>
       </div>
         <div  class="flex gap-4 mt-4 flex-wrap">
@@ -14,8 +14,8 @@
     </div>
     <div v-else class="mb-40">
       <h2>Quiz voltooid!</h2>
-      <h3 class="font-bold">Je hebt {{ correctAnswers }} van de {{ invoiceTest.length }} vragen correct beantwoord.</h3>
-      <div v-for="(question, index) in invoiceTest" :key="index">
+      <h3 class="font-bold">Je hebt {{ correctAnswers }} van de {{ belgianJournal.length }} vragen correct beantwoord.</h3>
+      <div v-for="(question, index) in belgianJournal" :key="index">
         <p class="font-bold pt-4">Vraag {{ index + 1 }}: {{ question.question }}</p>
         <p>Je antwoord: <span :style="{ color: question.selectedAnswer.correct ? 'green' : 'red' }">{{ question.selectedAnswer.answer }}</span></p>
       </div>
@@ -30,25 +30,27 @@ definePageMeta({
   middleware: 'auth',
 })
 
-const invoiceTest = ref<InvoiceTest[]>([]);
+const belgianJournal = ref<BelgianJournal[]>([]);
 const currentQuestionIndex = ref<number>(0);
 const correctAnswers = ref<number>(0);
 
-const fetchInvoiceTest = async () => {
+const fetchBelgianJournal = async () => {
     try {
-        const response = await fetch('/database/invoiceTest.json')
-        const dataInvoiceTest = await response.json()
+        const response = await fetch('/database/belgianJournal.json')
+        const dataBelgianJournal = await response.json()
         //@ts-ignore
-        invoiceTest.value = dataInvoiceTest.invoiceTest as InvoiceTest
+        belgianJournal.value = dataBelgianJournal.belgianJournal as belgianJournal
     } catch (error) {
-        console.error('Failed to fetch invoice:', error)
+        console.error('Failed to fetch Belgian offical journal:', error)
     }
 }
 
-onMounted(fetchInvoiceTest)
+onMounted(() => {
+    fetchBelgianJournal()
+})
 
 const currentQuestion = computed(() => {
-  return invoiceTest.value ? invoiceTest.value[currentQuestionIndex.value] : null
+  return belgianJournal.value ? belgianJournal.value[currentQuestionIndex.value] : null
 });
 
 const selectAnswer = (answer: AnswerTest) => {
@@ -64,7 +66,7 @@ if (currentQuestion.value) {
 const resetQuiz = () => {
   currentQuestionIndex.value = 0;
   correctAnswers.value = 0;
-  invoiceTest.value.forEach(question => {
+  belgianJournal.value.forEach(question => {
     //@ts-expect-error
     question.selectedAnswer = null;
   });

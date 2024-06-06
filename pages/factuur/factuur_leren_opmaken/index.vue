@@ -46,7 +46,7 @@ const errorMessage = ref<string | null>(null)
 
 const fetchInvoice = async () => {
   try {
-    const response = await fetch('/invoice.json')
+    const response = await fetch('/database/invoice.json')
     const dataInvoice = await response.json()
     //@ts-ignore
     invoice.value = dataInvoice.invoice as Invoice

@@ -17,7 +17,7 @@
 const motivations = ref<Motivation[]>([]);
 const fetchMotivations = async () => {
   try {
-    const response = await fetch('/motivations.json');
+    const response = await fetch('/database/motivations.json');
     const dataMotivation = await response.json();
     //@ts-ignore
     motivations.value = dataMotivation.motivations as Motivation[];

@@ -1,7 +1,7 @@
 {
     "invoice": {
       "title": "Een facturen leren opmaken",
-      "description": "Tim heeft een bedrijf en hij verkoopt werkkleding aan ondernemingen. Marie koopt op 16 juni voor haar werknemers 3 t-shirts en 1 paar schoenen bij Tim. In totaal betaalt ze 338,80 euro aan Tim. Hiervan kan zij 58,80 euro aftrekken van de btw. Uiterlijk moet ze de factuur betalen tegen 30 juni.",
+      "description": "Tim heeft een bedrijf genaamd Naai bv, en hij verkoopt dit werkkleding aan ondernemingen. Marie heeft een NV en koopt op 16 juni voor haar werknemers 3 T-shirts en 1 paar schoenen bij Tim. In totaal betaalt ze 338,80 euro aan Tim. Hiervan kan zij 58,80 euro aftrekken van de btw. Uiterlijk moet ze de factuur betalen tegen 30 juni.",
       "questions": [
         {
           "id": 1,
@@ -81,7 +81,7 @@
         },
         {
           "id": 8,
-          "answer": "Tim bv, Langgemuntlaan 77, 9000 Gent\nBTW: BE0148.939.939\nTelefoon: 046 35 96 36"
+          "answer": "Naai bv, Langgemuntlaan 77, 9000 Gent\nBTW: BE0148.939.939\nTelefoon: 046 35 96 36"
         },
         {
           "id": 11,

@@ -113,7 +113,7 @@ async function handleRegister(){
  });
 
     useRouter().push(
-       "/login",
+      "/login",
     );
  } catch(e: any) {
    console.error(e)

@@ -26,13 +26,13 @@
           </textarea>
         </div>
       </div>
-      <button type="submit">Opslaan</button>
+      <button class="max-w-fit border-none" type="submit">Opslaan</button>
     </form>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+
 const route = useRoute();
 const router = useRouter();
 const { data: businessPlan } = await useFetch(`/api/businessPlan/${route.params.id}`);
@@ -87,6 +87,8 @@ const goBack = () => {
   router.back();
 };
 </script>
+
+
 
 <style scoped>
 </style>

@@ -13,15 +13,16 @@
         </li>
       </NuxtLink>
     </ul>
-     <button @click="downloadAllAsPDF">
+    <div class=" flex justify-center">
+     <button class="max-w-fit border-none" @click="downloadAllAsPDF">
       Download businessplan als PDF
     </button>
+    </div>
+
   </div>
 </template>
 
 <script setup>
-
-
 
 let htmlToPdf
 
@@ -48,7 +49,7 @@ const downloadAllAsPDF = async () => {
       <h2>${plan.title}</h2>
       ${plan.businessPlanQuetion.map(question => `
         <div>
-          <p>${question.question}</p>
+          <p class="font-bold">${question.question}</p>
           ${question.businessPlanValue.map(value => `
             <p>${value.value}</p>
           `).join('')}
@@ -66,9 +67,9 @@ const downloadAllAsPDF = async () => {
   // Combineer alle HTML-inhoud met een scheidingsteken
   const combinedHTML = businessPlanHTML.join('<hr>');
 
-   const worker = htmlToPdf().from(combinedHTML).save('Business_Plans.pdf');
+   const worker = htmlToPdf().from(combinedHTML).save('Business_Plan.pdf');
 
-   worker.save('Business_Plans.pdf')
+   worker.save('Business_Plan.pdf')
   .then(() => console.log('PDF generation finished'))
   .catch((error) => console.error('Error during PDF generation', error))
 

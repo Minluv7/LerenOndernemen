@@ -36,3 +36,23 @@ interface Motivation {
     answer: string;
     correct: boolean;
   }
+
+  interface SocialInsurance {
+    [x: string]: AnswerTest;
+    selectedAnswer: AnswerTest;
+    selectedAnswer: AnswerTest;
+    id: number;
+    title: string;
+    questions: string;
+    answers: AnswerTest[];
+  }
+
+  interface BelgianJournal {
+    [x: string]: AnswerTest;
+    selectedAnswer: AnswerTest;
+    selectedAnswer: AnswerTest;
+    id: number;
+    title: string;
+    questions: string;
+    answers: AnswerTest[];
+  }

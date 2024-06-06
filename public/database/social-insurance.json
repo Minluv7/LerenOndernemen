@@ -1,0 +1,149 @@
+{
+    "socialInsurance": [
+        {
+            "id": 1,
+            "question": "Is een sociaal verzekering hetzelfde als een sociaal secretariaat?",
+            "answers": [
+                {
+                    "answer": "ja",
+                    "correct": false
+                },
+                {
+                    "answer": "nee",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "question": "Wat is een sociaal verzekering?",
+            "answers": [
+                {
+                    "answer": "Een verzekering die je beschermt tegen financiële risico's",
+                    "correct": false
+                },
+                {
+                    "answer": "Een verzekering die je beschermt tegen sociale risico's",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "question": "In welke domeinen kan een sociaal verzekering je beschermen?",
+            "answers": [
+                
+
+                {
+                    "answer": "Sportblessures, vakantie-uitkeringen, huisdierverzekeringen, verkeersboetes",
+                    "correct": false
+                },
+                {
+                    "answer": " Werkloosheid, ziekte, arbeidsongevallen, pensioen, kinderbijslag, gezondheidszorg",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "question": "Wat is het doel van sociale verzekering?",
+            "answers": [
+                {
+                    "answer": "Het bieden van financiële bescherming en ondersteuning bij inkomensverlies door werkloosheid, ziekte of ouderdom.",
+                    "correct": true
+                },
+                {
+                    "answer": "Het aanbieden van kortingen op luxeproducten en vakanties.",
+                    "correct": false
+                }
+            ]
+        },
+        
+        {
+            "id": 5,
+            "question": "Wie betaalt doorgaans de premies voor sociale verzekeringen?",
+            "answers": [
+                {
+                    "answer": "Werkgevers en werknemers, vaak aangevuld door de overheid.",
+                    "correct": true
+                },
+                {
+                    "answer": "Alleen de overheid.",
+                    "correct": false
+                }
+            ]
+        },
+        
+        {
+            "id": 6,
+            "question": "Welke van de volgende is geen onderdeel van sociale verzekering?",
+            "answers": [
+                
+                {
+                    "answer": "Arbeidsongeschiktheidsverzekering",
+                    "correct": false
+                },
+                {
+                    "answer": "Levensverzekering",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "question": "Wat is een voorbeeld van een sociale verzekeringsuitkering?",
+            "answers": [
+                {
+                    "answer": "Kinderbijslag",
+                    "correct": true
+                },
+                {
+                    "answer": "Bonussen voor hoge prestaties op het werk",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "question": "Hoe verschilt sociale verzekering van particuliere verzekering?",
+            "answers": [
+                {
+                    "answer": "Sociale verzekering is meestal verplicht en wordt geregeld door de overheid, terwijl particuliere verzekering optioneel is en wordt aangeboden door privébedrijven.",
+                    "correct": true
+                },
+                {
+                    "answer": "Sociale verzekering biedt alleen dekking voor materiële schade, terwijl particuliere verzekering zowel materiële als immateriële schade dekt.",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "question": "Wat is een voorwaarde om in aanmerking te komen voor werkloosheidsuitkering?",
+            "answers": [
+                {
+                    "answer": "Je moet een bepaalde periode gewerkt hebben en bijdragen hebben betaald aan de sociale verzekering.",
+                    "correct": true
+                },
+                {
+                    "answer": "Je moet een woningeigenaar zijn en geen hypotheek hebben.",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "question": "Wat is de naam van de Belgische instelling die de sociale zekerheid beheert?",
+            "answers": [
+                {
+                    "answer": "Rijksdienst voor Sociale Zekerheid (RSZ)",
+                    "correct": true
+                },
+                {
+                    "answer": "Federale Overheidsdienst Financiën",
+                    "correct": false
+                }
+            ]
+        }
+    ]
+}
