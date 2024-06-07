@@ -46,6 +46,7 @@ const dailyMotivation = computed(() => {
 onMounted(async () => {
   await fetchMotivations();
 });
+
 </script>
 
 <style scoped>

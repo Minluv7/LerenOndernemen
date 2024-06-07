@@ -32,7 +32,7 @@ const { data: categories } = await useFetch(`/api/categories`);
 
 .image-container {
     width: 100%;
-    height: 150px;
+    height: 9.375rem;
     display: flex;
     align-items: center;
     justify-content: center;
