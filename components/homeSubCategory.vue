@@ -6,7 +6,7 @@
           <li v-for="category in categories" :key="category.id" class="grid-item rounded-3xl bg-[#BADBE7]">
             <div  v-if="category.subCategories.length > 0">
               <NuxtLink :to="`/${category.subCategories[0].slug}`" class="flex flex-col p-4 gap-4 items-center justify-between" @click="markAsViewed(category.subCategories[0].id)">
-                <img class="w-[8rem] h-[10rem] object-cover" :src="category.subCategories[0].image" :alt="category.subCategories[0].title">
+                <img class="w-[8rem] h-[10rem] object-cover sub-image" :src="category.subCategories[0].image" :alt="category.subCategories[0].title">
                 <h3 class="text-center">{{ category.subCategories[0].title }}</h3>
               </NuxtLink>
             </div>
@@ -48,6 +48,12 @@ const markAsViewed = async (subCategoryId: any) => {
 .grid-item {
   list-style: none; 
   padding: 0;
+}
+
+.sub-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 </style>

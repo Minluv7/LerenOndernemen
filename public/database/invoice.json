@@ -1,7 +1,7 @@
 {
     "invoice": {
       "title": "Een facturen leren opmaken",
-      "description": "Tim heeft een bedrijf genaamd Naai bv, en hij verkoopt dit werkkleding aan ondernemingen. Marie heeft een NV en koopt op 16 juni voor haar werknemers 3 T-shirts en 1 paar schoenen bij Tim. In totaal betaalt ze 338,80 euro aan Tim. Hiervan kan zij 58,80 euro aftrekken van de btw. Uiterlijk moet ze de factuur betalen tegen 30 juni.",
+      "description": "Tim heeft een bedrijf genaamd Naai bv. Hij verkoopt dit werkkleding aan ondernemingen. Marie heeft een NV en kocht op 16 juni voor haar werknemers 3 T-shirts en 1 paar schoenen bij Tim. In totaal betaalt ze 338,80 euro aan Tim. Hiervan kan zij 58,80 euro aftrekken van de btw. Uiterlijk moet ze de factuur betalen tegen 30 juni.",
       "questions": [
         {
           "id": 1,
