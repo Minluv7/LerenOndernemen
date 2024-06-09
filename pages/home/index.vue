@@ -2,7 +2,7 @@
   <div class="space">
     <div v-if="user" class="flex items-center pt-6 flex-col">
       <h1 class="text-center">Welkom {{ user.userName }}</h1>
-      <p>Leer vandaag meer over ondernemerschap.</p>
+      <p class="text-center pt-4">Leer vandaag meer over ondernemerschap.</p>
       <img src="/assets/image/homePage/home.png" alt="home_page_image">
     </div>
     <homeSubCategory/>

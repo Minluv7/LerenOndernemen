@@ -57,7 +57,6 @@ const speak = (text: string) => {
 
     currentUtterance = utterance;
     speechSynthesis.speak(utterance);
-  
     isSpeaking.value = true;
 };
 

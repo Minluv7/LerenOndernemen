@@ -1,13 +1,13 @@
 <template>
     <div class="space">
-  <lessonsPages />
+      <lessonsPages />
     </div>
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  middleware: 'auth',
-})
+  definePageMeta({
+    middleware: 'auth',
+  })
 </script>
 
 <style scoped>

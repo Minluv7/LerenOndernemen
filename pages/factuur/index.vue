@@ -2,10 +2,10 @@
     <div class="space pb-32">
         <lessonsPages />
         <NuxtLink class="flex justify-center pt-8"  :to="'/factuur/factuur_leren_opmaken'">
-        <button class="max-w-fit border-none">Factuur leren opmaken</button>
+            <button class="max-w-fit border-none">Factuur leren opmaken</button>
         </NuxtLink>
         <NuxtLink class="flex justify-center pt-8"  :to="'/factuur/factuur_testen'">
-        <button class="max-w-fit border-none">Factuur kennis testen</button>
+            <button class="max-w-fit border-none">Factuur kennis testen</button>
         </NuxtLink>
         <a :href="excelFilePath" download="factuur_sjabloon.xlsx" class="flex gap-2 justify-center pt-8">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">

@@ -22,37 +22,22 @@ interface Motivation {
     answer: string;
   }
 
-  interface InvoiceTest {
-    [x: string]: AnswerTest;
-    selectedAnswer: AnswerTest;
-    selectedAnswer: AnswerTest;
-    id: number;
-    title: string;
-    questions: string;
-    answers: AnswerTest[];
-  }
-
   interface AnswerTest {
+    id: number;
     answer: string;
     correct: boolean;
   }
-
-  interface SocialInsurance {
-    [x: string]: AnswerTest;
-    selectedAnswer: AnswerTest;
-    selectedAnswer: AnswerTest;
+  
+  interface Question {
     id: number;
     title: string;
-    questions: string;
+    question: string;
     answers: AnswerTest[];
+    selectedAnswer?: AnswerTest; // Optional because it will be selected during the quiz
   }
-
-  interface BelgianJournal {
-    [x: string]: AnswerTest;
-    selectedAnswer: AnswerTest;
-    selectedAnswer: AnswerTest;
-    id: number;
-    title: string;
-    questions: string;
-    answers: AnswerTest[];
-  }
+  
+  // Rename specific interfaces to a more generic name to reuse in different quizzes
+  type SocialInsurance = Question;
+  type InvoiceTest = Question;
+  type BelgianJournal = Question;
+  

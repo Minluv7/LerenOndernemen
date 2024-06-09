@@ -32,12 +32,6 @@
   </form>
 </template>
 
-<style>
-.text-color-blue {
-  color: #7AA5B8;
-}
-</style>
-
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
@@ -73,3 +67,8 @@ async function handleLogin() {
   }
 }
 </script>
+<style>
+.text-color-blue {
+  color: #7AA5B8;
+}
+</style>
