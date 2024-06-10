@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import quizComponent from '@/components/quizComponent.vue';
+  import quizComponent from '@/components/quizComponent.vue';
 </script>
 
 <style scoped>

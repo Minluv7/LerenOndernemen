@@ -10,8 +10,6 @@ definePageMeta({
   layout: false,
 })
 
-// fetch the products
-
 </script>
 
 <style scoped>
