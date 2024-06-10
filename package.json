@@ -12,7 +12,7 @@
   "dependencies": {
     "@nuxtjs/auth-next": "5.0.0-1667386184.dfbbb54",
     "@nuxtjs/cloudinary": "^2.7.3",
-    "@prisma/client": "^5.13.0",
+    "@prisma/client": "^5.15.0",
     "@sidebase/nuxt-prisma": "^0.1.2",
     "@vercel/node": "^3.1.5",
     "@vercel/postgres": "^0.8.0",
