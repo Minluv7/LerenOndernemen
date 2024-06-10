@@ -76,8 +76,8 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const form = ref({
   userName: '',
@@ -87,6 +87,7 @@ const form = ref({
   lastName: '',
 });
 
+
 const isLoading = ref(false);
 const errorMessage = ref('');
 
@@ -95,17 +96,20 @@ async function handleRegister() {
     isLoading.value = true;
     errorMessage.value = '';
 
-    const { error } = await useFetch('/api/auth/register', {
+    const response = await fetch('/api/auth/register', {
       method: 'POST',
-      body: form.value,
-     
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(form.value),
     });
 
-    if (error.value) {
-      throw new Error(error.value.data.message);
+    if (!response.ok) {
+      const errorData: any = await response.json();
+      throw new Error(errorData.message || 'Registration failed');
     }
 
-    useRouter().push('/login');
+    router.push('/login');
   } catch (e: any) {
     errorMessage.value = e.message;
   } finally {
