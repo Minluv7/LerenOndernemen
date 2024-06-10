@@ -18,7 +18,7 @@
           ></textarea>
         </div>
         <div v-if="business.businessPlanValue.length === 0" class="flex flex-col gap-4 pt-4">
-          <textarea v-model="business.answerValue" cols="20" rows="5" class="p-4" placeholder="Schrijf je antwoord" required ></textarea>
+          <textarea v-model="business.answerValue" cols="20" rows="5" class="p-4" placeholder="Schrijf je antwoord"></textarea>
         </div>
       </div>
       <button class="max-w-fit border-none" type="submit">Opslaan</button>
