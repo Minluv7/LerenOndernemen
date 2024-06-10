@@ -1,7 +1,7 @@
 <template>
-<div>
-  <Dashboard />
-  <Footer />
+  <div>
+    <Dashboard />
+    <Footer />
   </div>
 </template>
 
