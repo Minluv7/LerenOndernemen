@@ -1,6 +1,6 @@
 <template>
     <ul class="grid-container pt-8 pb-20">
-        <li v-for="c in categories" :key="c.id" class="grid-item rounded-3xl bg-[#61A5C2] flex justify-center" >
+        <li v-for="c in categories" :key="c.id" class="grid-item rounded-3xl bg-[#61A5C2]" >
             <NuxtLink :to="`/curses/${c.id}`" class="flex flex-col p-4 gap-4 items-center justify-between">
                 <div class="image-container">
                     <img :src="c.image" :alt="c.name" class="category-image">

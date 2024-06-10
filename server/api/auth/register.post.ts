@@ -15,18 +15,33 @@ export default defineEventHandler(async (event) => {
         })
     }
 
-    // Check if user already exists
-    const existingUser = await prisma.users.findUnique({
+     // Check if email already exists
+     const existingEmail = await prisma.users.findUnique({
         where: {
-            email: body.email
+            email: body.email.toLowerCase(), // Normalize email to lowercase
         }
     });
 
-    if (existingUser) {
+    if (existingEmail) {
         throw createError({
             statusCode: 400,
             statusMessage: 'Bad Request',
-            message: 'User already exists'
+            message: 'Deze email bestaat al'
+        });
+    }
+
+    // Check if username already exists
+    const existingUsername = await prisma.users.findUnique({
+        where: {
+            userName: body.userName,
+        }
+    });
+
+    if (existingUsername) {
+        throw createError({
+            statusCode: 400,
+            statusMessage: 'Bad Request',
+            message: 'Deze gebruikersnaam bestaat al'
         });
     }
 
@@ -37,7 +52,7 @@ export default defineEventHandler(async (event) => {
     const user = await prisma.users.create({
         data: {
             userName: body.userName,
-            email: body.email,
+            email: body.email.toLowerCase(),
             password: hashedPassword,
             firstName: body.firstName,
             lastName: body.lastName

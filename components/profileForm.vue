@@ -65,5 +65,10 @@ const updateProfile = async () => {
 </script>
 
 <style scoped>
+input{
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  width: 70%;
 
+}
 </style>

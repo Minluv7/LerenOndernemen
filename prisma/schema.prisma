@@ -47,7 +47,6 @@ model SubCategories {
   avatar String?
   category_id Int
   category Categories @relation(fields: [category_id], references: [id])
-  types Types[]
   viewedLessens ViewedLessens[]
 }
 
@@ -80,12 +79,4 @@ model BusinessPlanValue{
   businessPlanQuetion BusinessPlanQuetion @relation(fields: [businessPlanQuetionId], references: [id])
   user_id Int
   user Users @relation(fields: [user_id], references: [id])
-}
-
-model Types{
-    id Int @id @default(autoincrement())
-    name String
-    subCategoryId Int
-    subCategory SubCategories @relation(fields: [subCategoryId], references: [id])
-  
 }

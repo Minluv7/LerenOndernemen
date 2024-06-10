@@ -7,7 +7,11 @@
 
 <script setup>
 
+const router = useRouter();
 
+const goBack = () => {
+    router.back();
+};
 
 definePageMeta({
   middleware: 'auth',

@@ -39,8 +39,8 @@ const splitDescription = (description: string) => {
     }
 };
 
-declare var SpeechSynthesisUtterance: any;
-declare var speechSynthesis: any;
+declare let SpeechSynthesisUtterance: any;
+declare let speechSynthesis: any;
 
 let currentUtterance: any = null;
 const isSpeaking = ref(false);
@@ -60,7 +60,6 @@ const speak = (text: string) => {
     isSpeaking.value = true;
 };
 
-
 const stopSpeaking = () => {
     if (currentUtterance) {
         speechSynthesis.cancel();
@@ -76,7 +75,6 @@ const toggleSpeak = (text: string) => {
         speak(text);
     }
 };
-
 
 onMounted(() => {
     // Load voices asynchronously
@@ -106,7 +104,7 @@ const goBack = () => {
     width: 50%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
     .avatar-img {
         width: 8rem; 
         object-fit: cover;

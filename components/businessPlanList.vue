@@ -1,29 +1,27 @@
 <template>
-    
- <ul class="flex gap-4 flex-col pb-4">
-      <NuxtLink
-        v-for="business in businessPlan"
-        :key="business.id"
-        :to="`/business_plan/business_plan_list/${business.id}`"
-        class="rounded-md border border-[#61A5C2] p-4 h-20 content-center hover:bg-[#61A5C2] hover:text-white transition duration-300 business-item">
-        <li class="flex gap-4">
-          <p>{{ business.id }}.</p>
-          <p>{{ business.title }}</p>
-        </li>
-      </NuxtLink>
-    </ul>
+  <ul class="flex gap-4 flex-col pb-4">
+    <NuxtLink
+      v-for="business in businessPlan"
+      :key="business.id"
+      :to="`/business_plan/business_plan_list/${business.id}`"
+      class="rounded-md border border-[#61A5C2] p-4 h-20 content-center hover:bg-[#61A5C2] hover:text-white transition duration-300 business-item">
+      <li class="flex gap-4">
+        <p>{{ business.id }}.</p>
+        <p>{{ business.title }}</p>
+      </li>
+    </NuxtLink>
+  </ul>
     <div class=" flex justify-center">
-     <button class="max-w-fit border-none" @click="downloadAllAsPDF">
-      Download businessplan als PDF
-    </button>
+      <button class="max-w-fit border-none" @click="downloadAllAsPDF">
+        Download businessplan als PDF
+      </button>
     </div>
-
 </template>
 
 <script setup>
 
-import AES from 'crypto-js/aes'; // Import AES directly
-import Utf8 from 'crypto-js/enc-utf8'; // Import Utf8 encoding for decryption
+import AES from 'crypto-js/aes'; 
+import Utf8 from 'crypto-js/enc-utf8';
 
 let htmlToPdf
 
@@ -84,11 +82,7 @@ const downloadAllAsPDF = async () => {
 
 };
 
-const router = useRouter();
 
-const goBack = () => {
-    router.back();
-};
 </script>
 
 <style scoped>

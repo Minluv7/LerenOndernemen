@@ -15,7 +15,8 @@ export default NuxtAuthHandler({
       name: 'credentials',
       credentials: {},
       async authorize(credentials: { email: string, password: string }) {
-        const user = await prisma.users.findUnique({ where: { email: credentials.email } });
+        const email = credentials.email.toLowerCase();
+        const user = await prisma.users.findUnique({ where: { email: email } });
 
         if (!user || !(await bcrypt.compare(credentials.password, user.password))) {
           throw new Error('E-mail of wachtwoord is niet correct'); // Geef een foutmelding als de inloggegevens onjuist zijn

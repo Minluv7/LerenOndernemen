@@ -1,11 +1,10 @@
 <template>
   <div  class="space">
     <profile-form />
-  <profile-sub-categories />
+    <profile-sub-categories />
     <div class="flex justify-center">
       <logout-button class="pt-4 max-w-fit"/>
     </div>
-   
     <button @click="confirmDeleteAccount" class="underline text-center pt-8 border-none bg-transparent text-[#013a63]">Account verwijderen</button>
   </div>
 </template>
@@ -56,11 +55,5 @@ definePageMeta({
   max-width: 90%;
   margin: 0 auto;
   margin-bottom: 8rem;
-}
-input{
-  padding: 0.5rem;
-  border-radius: 0.8rem;
-  width: 70%;
-
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="space">
-      <lessonsPages />
+      <will-come />
     </div>
 </template>
 
