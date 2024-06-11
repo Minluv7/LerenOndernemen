@@ -11,21 +11,31 @@ export default defineEventHandler(async (event) => {
     console.log('Geen geldige sessie gevonden');
     return { error: 'Geen geldige sessie gevonden' };
   }
-// @ts-expect-error
+  // @ts-expect-error
   console.log('Sessie gevonden:', session.user?.id);
 
-  // Verwijder de gebruiker uit de database
   try {
+
+    await prisma.businessPlanValue.deleteMany({
+      where: {
+        //@ts-expect-error
+        user_id: session.user.id,
+      },
+    });
+
     const deletedUser = await prisma.users.delete({
       where: {
         //@ts-expect-error
         id: session.user.id,
       },
     });
+
     console.log('Gebruiker succesvol verwijderd:', deletedUser);
     return { message: 'Gebruiker succesvol verwijderd', deletedUser };
   } catch (error) {
     console.error('Fout bij het verwijderen van gebruiker:', error);
     return { error: 'Fout bij het verwijderen van gebruiker', details: error };
+  } finally {
+    await prisma.$disconnect();
   }
 });
