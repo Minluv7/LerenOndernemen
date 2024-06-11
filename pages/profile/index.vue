@@ -1,39 +1,13 @@
 <template>
-  <div v-if="subCategories" class="space">
-    <div >
-      <h1>Profiel</h1>
-      <form v-if="getUser" @submit.prevent="updateProfile"   >
-        <div class="flex flex-col pt-4">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Email" v-model="getUser.email">
-        </div>
-      <div class="flex flex-col pt-4">
-        <label for="gebruikersnaam">Gebruikersnaam</label>
-        <input type="text" id="gebruikersnaam" name="gebruikersnaam" placeholder="Gebruikersnaam" v-model="getUser.userName">
-       </div>
-       <div class="flex flex-col pt-4">
-        <label for="firstName">Naam</label>
-        <input type="text" id="firstName" name="firstName" placeholder="Naam" v-model="getUser.firstName">
-       </div>
-       <div class="flex flex-col pt-4">
-        <label for="lastName">Achternaam</label>
-        <input type="text" id="lastName" name="lastName" placeholder="Achternaam" v-model="getUser.lastName">
-       </div>
-        <button class="border-none max-w-fit mt-4" type="submit">Opslaan</button>
-      </form>
-   
-      <h2 class="pt-4">Lessen die je al hebt gevolgd</h2>
-      <ul class="pt-1">
-        <li v-for="subCategory in subCategories" :key="subCategory.id">
-          <NuxtLink :to="`/curses/${subCategory.subCategory.id}`">
-            -  {{subCategory.subCategory.title}}
-          </NuxtLink>
-        </li>
-      </ul>
-        <p  class="pt-4">Je hebt al {{ subCategories.length }} lessen gevolgd</p>
+  <div class="space">
+    <profile-form />
+    <profile-sub-categories />
+    <div class="flex justify-center">
+      <logout-button class="pt-4 max-w-fit" />
     </div>
-    <logout-button class="pt-4"/>
-    <button @click="confirmDeleteAccount" class="underline text-center pt-8 border-none bg-transparent text-[#013a63]">Account verwijderen</button>
+    <button @click="confirmDeleteAccount" class="underline text-center pt-8 border-none bg-transparent text-[#013a63]">
+      Account verwijderen
+    </button>
   </div>
 </template>
 
