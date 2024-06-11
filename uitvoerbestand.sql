@@ -447,14 +447,6 @@ COPY public."BusinessPlanQuetion" (id, question, "businessPlanId") FROM stdin;
 --
 
 COPY public."BusinessPlanValue" (id, value, "businessPlanQuetionId", user_id) FROM stdin;
-91	U2FsdGVkX18+4bBpYisSZQ4wsm/7//SzTutM/geI+Hl6PFOzIgPCcuO9YVeWIseg	1	1
-93	U2FsdGVkX1+j8dLm8k6lZpOSaQCdaRHdAFYEfqB4CzN0C+a0KRHRxfcslRWdmMYWYQ8bvEyP89XV63yGrVQhcA==	3	1
-94	U2FsdGVkX19iDCo6sLwHlMYWXzrISbaCwRxLFx515kirnb7vQIwhUr5LRJ2t6G4J	4	1
-92	U2FsdGVkX18AlcJf0nKtAKJ8GAmcgGKNAYnQcZWIuSOw3V7EwOnnhrrtQhhbWi1KQNpbHJN0y2w86f1sOY4Vew==	2	1
-87	U2FsdGVkX18IelbyuB4EnTLJ3axKWyyTAXwavgdTWCxIRhMWPQlLUbgbdNyhMnYejhzXLxFX2mxoqan5pZ4Yjw==	1	8
-88	U2FsdGVkX19AMkj62GHOvlFS0z62siPacgpoCarP+jRdztjp6uZzexMZgWusivfk24udOT3Zw4J+7kENaMxkMQ==	2	8
-90	U2FsdGVkX18KvfQHLpNGQdWzqpkLWN3xEa+sPk/5KG0YM2HhAJ0w5mf5XReAc97s	4	8
-89	U2FsdGVkX18zxUy8WGfMSZGAZZpjLraYay4XodZYHTQB94MhszVMR7h6U6q5cenRkgvdY/1+u90U0tSdWU+WiSZt3DlRcWpojBGK0WSbvjI=	3	8
 \.
 
 
@@ -526,6 +518,14 @@ COPY public."ViewedLessens" (id, "userId", "subCategoryId") FROM stdin;
 --
 
 COPY public._prisma_migrations (id, checksum, finished_at, migration_name, logs, rolled_back_at, started_at, applied_steps_count) FROM stdin;
+3f320779-a328-4133-a0fd-b84e61432ab7	f4c98bcadbd9b410d04c8643590e346b1a6bd061289930a1da4de74d944f961e	2024-06-10 23:22:02.976146+02	20240521145822_add_users_model	\N	\N	2024-06-10 23:22:02.954169+02	1
+817906b3-23a9-4604-9fd8-a8ffc025dbea	95efa3dd85b824b4f008ebc00a8e78e6a302d7eb8a76394eb5c572c097ad6ff4	2024-06-10 23:22:02.987098+02	20240521145928_add_dashboard_model	\N	\N	2024-06-10 23:22:02.977188+02	1
+4e9d3371-79a8-4cc4-8bf0-21b3ff9454c5	1440b61578f7cba48c95e7d5fb28172d9e9384ca3ffc01915f00a2b626a1887a	2024-06-10 23:22:03.00822+02	20240521150105_add_categories_model	\N	\N	2024-06-10 23:22:02.988339+02	1
+588c7a8e-fcf2-430c-9e46-193520200e2b	9d2cb9b9924919624a313a256d983d0ce123a921e59b9796689e34bcc5076146	2024-06-10 23:22:03.031855+02	20240521150203_add_sub_categories_model	\N	\N	2024-06-10 23:22:03.010061+02	1
+6cc23443-9de1-4212-bdbd-c2a003ea5916	d077c7df209a1b8032414e19a92f232b299dfdd691cd222f83e65e2fbcdb9543	2024-06-10 23:22:03.050054+02	20240528175245_add_viewed_lessens_model	\N	\N	2024-06-10 23:22:03.035977+02	1
+eb111af9-8d0c-49ca-a7ad-ace4e0f862a0	90d29037af397e4d83d8fc993533208cefd3e6d63bc56c14ef6bc6c8b4c603a1	2024-06-10 23:22:03.061095+02	20240530151907_add_business_plan_model	\N	\N	2024-06-10 23:22:03.051545+02	1
+b25a055b-9b18-4940-92aa-5e4c2e6cf268	be304a3fe9a18d772015bc63ac48986fc53a4e73f3ece5ca3f0b22fdf725d895	2024-06-10 23:22:03.073389+02	20240530161000_add_business_plan_quetion_model	\N	\N	2024-06-10 23:22:03.062327+02	1
+25698c0c-8cae-4e73-bf7f-f56f032614b0	5549ed2a90038bdba3c0029439dbec3e0d8c771c3f7c0e7ad6667a956648b73f	2024-06-10 23:22:03.08933+02	20240530161349_add_business_plan_value_model	\N	\N	2024-06-10 23:22:03.07463+02	1
 15b3fd15-d376-4b3b-ae5f-96b67a7b00d2	f4c98bcadbd9b410d04c8643590e346b1a6bd061289930a1da4de74d944f961e	2024-05-30 18:13:47.394775+02	20240521145822_add_users_model	\N	\N	2024-05-30 18:13:47.353446+02	1
 5d62e7a2-ab4a-4bba-8627-ac39c8425403	95efa3dd85b824b4f008ebc00a8e78e6a302d7eb8a76394eb5c572c097ad6ff4	2024-05-30 18:13:47.478282+02	20240521145928_add_dashboard_model	\N	\N	2024-05-30 18:13:47.427345+02	1
 980e1bf4-2d12-47d6-b9cf-2d600f4894b2	1440b61578f7cba48c95e7d5fb28172d9e9384ca3ffc01915f00a2b626a1887a	2024-05-30 18:13:47.498142+02	20240521150105_add_categories_model	\N	\N	2024-05-30 18:13:47.479382+02	1
@@ -692,7 +692,7 @@ CREATE UNIQUE INDEX "Users_userName_key" ON public."Users" USING btree ("userNam
 --
 
 ALTER TABLE ONLY public."BusinessPlanQuetion"
-    ADD CONSTRAINT "BusinessPlanQuetion_businessPlanId_fkey" FOREIGN KEY ("businessPlanId") REFERENCES public."BusinessPlan"(id) ON UPDATE CASCADE ON DELETE RESTRICT;
+    ADD CONSTRAINT "BusinessPlanQuetion_businessPlanId_fkey" FOREIGN KEY ("businessPlanId") REFERENCES public."BusinessPlan"(id) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
 --
@@ -732,7 +732,7 @@ ALTER TABLE ONLY public."ViewedLessens"
 --
 
 ALTER TABLE ONLY public."ViewedLessens"
-    ADD CONSTRAINT "ViewedLessens_userId_fkey" FOREIGN KEY ("userId") REFERENCES public."Users"(id) ON UPDATE CASCADE ON DELETE RESTRICT;
+    ADD CONSTRAINT "ViewedLessens_userId_fkey" FOREIGN KEY ("userId") REFERENCES public."Users"(id) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
 --
