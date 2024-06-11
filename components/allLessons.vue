@@ -26,7 +26,7 @@ const markAsViewed = async (subCategoryId: any) => {
   // Haal de subcategorie op
   const sub = (category.value as { subCategories: any[] }).subCategories.find((sub: any) => sub.id === subCategoryId);
 
-const excludedSlugs = ["notaris", "btw_aanvraag", "sociaal_secreteriaat", "vergunning", "eenmans_vennootschap", "jaarrekkening_pb_vb"];
+const excludedSlugs = ["notaris", "btw_aanvraag", "sociaal_secreteriaat", "vergunning", "eenmans_vennootschap", "jaarrekening_pb_vb"];
   // Controleer of de subcategorie niet verwijst naar de exclusieve pagina's
  if (!excludedSlugs.includes(sub.slug)) {
     // Voer het postverzoek uit om de subcategorie als bekeken te markeren
