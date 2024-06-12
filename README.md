@@ -6,7 +6,6 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 Leren Ondernemen is een gratis applicatie die als doel heeft mensen te informeren en te onderwijzen over ondernemerschap in België. Het is vooral de bedoeling dat gebruikers op een leuke en interactieve manier kennis maken met de wereld van het ondernemerschap.
 
 ## Setup
-
 Make sure to install the dependencies:
 ```bash
 # npm
@@ -15,7 +14,6 @@ npm install
 ```
 
 ## Development Server
-
 Start the development server on `http://localhost:3000`:
 
 ```bash
@@ -25,7 +23,6 @@ npm run dev
 ```
 
 ## Production
-
 Build the application for production:
 
 ```bash
