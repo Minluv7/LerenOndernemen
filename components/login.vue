@@ -14,7 +14,7 @@
                 <div class="w-40">
                     <img src="/assets/image/logos/logo@2x.png" alt="logo">
                 </div>
-                 <p class="text-xl font-bold md:text-xl">
+                <p class="text-xl font-bold md:text-xl">
                     Login om verder te gaan
                 </p>
             </div>
