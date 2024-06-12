@@ -1,7 +1,7 @@
 <template>
   <div class="pb-20">
-      <button class="w-20 border-none mb-8" @click="goBack"> Terug</button>
-   <business-plan-list />
+    <button class="w-20 border-none mb-8" @click="goBack"> Terug</button>
+    <business-plan-list />
   </div>
 </template>
 
