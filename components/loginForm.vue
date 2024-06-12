@@ -25,9 +25,9 @@
         required
       />
     </div>
-    <div class="flex items-center justify-end">
+    <!-- <div class="flex items-center justify-end">
       <a href="#" class="text-sm font-medium text-primary-600 hover:underline">Wachtwoord vergeten?</a>
-    </div>
+    </div> -->
     <button type="submit" class="shadow-md border-none flex w-full text-blue-50 rounded-lg p-2">Login</button>
   </form>
 </template>
