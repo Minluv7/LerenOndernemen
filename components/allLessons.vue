@@ -71,6 +71,7 @@ const isExcluded = (slug: string) => {
 .grid-item {
   list-style: none; 
   padding: 0;
+
 }
 
 .text-wrap {

@@ -405,6 +405,10 @@ ALTER TABLE ONLY public."ViewedLessens" ALTER COLUMN id SET DEFAULT nextval('pub
 COPY public."BusinessPlan" (id, title) FROM stdin;
 1	Beschrijving van je product of dienst
 2	Bedrijfsgegevens
+3	Missie en visie
+4	Marktanalyse
+5	Marketingplan
+6	Financieel plan
 \.
 
 
@@ -417,6 +421,24 @@ COPY public."BusinessPlanQuetion" (id, question, "businessPlanId") FROM stdin;
 2	Wat zijn de belangrijkste kenmerken en voordelen van het product of de dienst	1
 3	Hoe onderscheidt jouw product of dienst zich van die van concurrenten?	1
 4	Welke behoeften van de klant voorziet jouw product of dienst?	1
+5	Wat is de naam van je bedrijf en wat is de rechtsvorm?	2
+6	Waar is je bedrijf gevestigd en wat zijn je contactgegevens?	2
+7	Hoe lang bestaat je bedrijf al en wat is de geschiedenis ervan?	2
+8	Hoeveel werknemers heeft je bedrijf en wat is de organisatiestructuur?	2
+9	Wat is de missie van je bedrijf? Wat is het doel van je bedrijf en waarom bestaat het?	3
+10	Wat is de visie van je bedrijf? Hoe zie je de toekomst van je bedrijf en welke doelen wil je bereiken?	3
+11	Wie zijn je belangrijkste klanten en wat zijn hun behoeften en wensen?	4
+12	Wie zijn je belangrijkste concurrenten en wat zijn hun sterke en zwakke punten?	4
+13	Wat zijn de trends en ontwikkelingen in de markt die van invloed kunnen zijn op je bedrijf?	4
+14	Wat is de omvang van de markt en welk marktaandeel wil je veroveren?	4
+15	Wat is je doelgroep en hoe ga je deze bereiken?	5
+16	Wat is je product- en prijsstrategie?	5
+17	Hoe ga je je product of dienst promoten en verkopen?	5
+18	Wat zijn je plannen voor branding en positionering van je bedrijf?	5
+19	Wat zijn je verwachte inkomsten en kosten?	6
+20	Hoeveel kapitaal heb je nodig om je bedrijf te starten of te laten groeien?	6
+21	Wat is je verwachte winst- en verliesrekening?	6
+22	Wat zijn je verwachte cashflowprognoses, en hoe ga je deze berekenen en beheren?	6
 \.
 
 
@@ -448,6 +470,9 @@ COPY public."Categories" (id, name, image) FROM stdin;
 --
 
 COPY public."Dashboard" (id, title, description, image) FROM stdin;
+1	Gratis en interactief	Ontdek de gratis en interactieve leeromgeving van Education Business. Leer door middel van spel en ontwikkel je ondernemersvaardigheden!	https://res.cloudinary.com/donicaayt/image/upload/v1714896345/dashboard/olivz2fsk5k6nbgbjgdk.png
+2	Missie	De missie van Education Business is om studenten en professionals van alle achtergronden te inspireren, te onderwijzen en te ondersteunen bij het ontwikkelen van ondernemerschap.	https://res.cloudinary.com/donicaayt/image/upload/v1714896346/dashboard/jcsz4umuhj1tqzdvxfsr.png
+3	Doel	Ons hoofddoel is om ondernemerschap te bevorderen door middel van het aanleren van essentiële vaardigheden, waaronder het opstellen van een businessplan, juridische structuren, belastingen en meer. Ontdek stap voor stap hoe je kunt starten als ondernemer en succesvol kunt groeien!	https://res.cloudinary.com/donicaayt/image/upload/v1714896347/dashboard/eda5xypblreg0skfglj1.png
 \.
 
 
@@ -508,7 +533,7 @@ b531b8a6-02f2-41e6-89ed-959a21131e49	90d29037af397e4d83d8fc993533208cefd3e6d63bc
 -- Name: BusinessPlanQuetion_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."BusinessPlanQuetion_id_seq"', 4, true);
+SELECT pg_catalog.setval('public."BusinessPlanQuetion_id_seq"', 22, true);
 
 
 --
@@ -522,7 +547,7 @@ SELECT pg_catalog.setval('public."BusinessPlanValue_id_seq"', 7, true);
 -- Name: BusinessPlan_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."BusinessPlan_id_seq"', 2, true);
+SELECT pg_catalog.setval('public."BusinessPlan_id_seq"', 6, true);
 
 
 --
@@ -536,7 +561,7 @@ SELECT pg_catalog.setval('public."Categories_id_seq"', 4, true);
 -- Name: Dashboard_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."Dashboard_id_seq"', 1, false);
+SELECT pg_catalog.setval('public."Dashboard_id_seq"', 3, true);
 
 
 --
