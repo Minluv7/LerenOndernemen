@@ -74,9 +74,10 @@ const downloadAllAsPDF = async () => {
   // Combineer alle HTML-inhoud met een scheidingsteken
   const combinedHTML = businessPlanHTML.join('<hr>');
 
-   const worker = htmlToPdf().from(combinedHTML).save('Business_Plan.pdf');
+  const worker = htmlToPdf().from(combinedHTML);
 
-   worker.save('Business_Plan.pdf')
+worker.save('Business_Plan.pdf')
+
   .then(() => console.log('PDF generation finished'))
   .catch((error) => console.error('Error during PDF generation', error))
 
