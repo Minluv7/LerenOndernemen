@@ -29,8 +29,6 @@
 
 <script setup lang="ts">
 
-import ConfettiExplosion from 'vue-confetti-explosion'
-
 const router = useRouter()
 
 const invoice = ref<Invoice | null>(null)
@@ -75,9 +73,7 @@ const currentImage = computed(() => {
 </script>
 
 <script lang="ts">
-
-export default {
-}
+export default {}
 </script>
 
 

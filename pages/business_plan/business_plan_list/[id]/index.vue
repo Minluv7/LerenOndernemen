@@ -142,6 +142,9 @@ const { data: businessPlan } = await useFetch(`/api/businessPlan/${route.params.
 const goBack = () => {
   router.back();
 };
+definePageMeta({
+  middleware: 'auth',
+});
 </script>
 
 <style scoped>

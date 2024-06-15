@@ -7,7 +7,6 @@
 
 <script setup lang="ts">
 import invoiceFormatPage  from "@/components/invoiceFormatPage.vue";
-
 definePageMeta({
   middleware: 'auth',
 })

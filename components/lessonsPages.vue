@@ -17,9 +17,6 @@
 
 <script setup lang="ts">
 
-import { ref, onMounted } from 'vue';
-import { useFetch } from '#app';
-
 const route = useRoute();
 const slug = route.path.split('/').pop();
 const { data: subCategories } = await useFetch(`/api/subCategory/${slug}`);
@@ -42,7 +39,7 @@ const splitDescription = (description: string) => {
 declare let SpeechSynthesisUtterance: any;
 declare let speechSynthesis: any;
 
-let currentUtterance: any = null;
+
 const isSpeaking = ref(false);
 
 const speak = (text: string) => {
@@ -55,17 +52,17 @@ const speak = (text: string) => {
     utterance.rate = 1;
     utterance.volume = 1;
 
-    currentUtterance = utterance;
+ 
     speechSynthesis.speak(utterance);
     isSpeaking.value = true;
 };
 
 const stopSpeaking = () => {
-    if (currentUtterance) {
-        speechSynthesis.cancel();
-        currentUtterance = null;
-        isSpeaking.value = false;
-    }
+
+    speechSynthesis.cancel();
+    
+    isSpeaking.value = false;
+
 };
 
 const toggleSpeak = (text: string) => {
